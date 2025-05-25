@@ -42,9 +42,25 @@
          </ul>
          {% endif %}
       </header>
-      <section>
+<!--       <section> -->
+<!--          {{ content }} -->
+<!--       </section> -->
+      <div class="main-layout" style="display: flex; gap: 20px;">
+        <section style="flex: 2;">
          {{ content }}
-      </section>
+        </section>
+
+     <aside style="flex: 1; max-height: 400px; overflow-y: auto; border-left: 1px solid #ccc; padding-left: 10px;">
+       <h3>Latest Updates</h3>
+       <ul class="news-list">
+         <li><strong>May 2025:</strong> Published my flapping wing paper at AIAA SciTech!</li>
+         <li><strong>April 2025:</strong> Presented my jellyfish-inspired robot concept.</li>
+         <li><strong>Feb 2025:</strong> Started working on drone exploration using RL.</li>
+         <!-- Add more updates here -->
+          </ul>
+        </aside>
+      </div>
+
       <footer>
          {% if site.github.is_project_page %}
          <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
