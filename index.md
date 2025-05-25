@@ -23,7 +23,7 @@
 
 ---
 [Multi-Agent Drone Coordination for Entity Rescue Missions](http://example.com/)
-<img src="images/swarm.jpg?raw=true"/>
+<img src="images/swarm.png?raw=true"/>
 
 ---
 [Launch and Recovery System for Sparus II AUV under a spectrum of sea state](http://example.com/)
