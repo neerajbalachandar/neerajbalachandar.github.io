@@ -45,21 +45,25 @@
 <!--       <section> -->
 <!--          {{ content }} -->
 <!--       </section> -->
-      <div class="main-layout" style="display: flex; gap: 20px;">
-        <section style="flex: 2;">
-         {{ content }}
-        </section>
+      <div style="display: flex; flex-direction: row; gap: 40px; align-items: flex-start;">
+  
+  <!-- Main Content -->
+  <section style="flex: 2; min-width: 0;">
+    {{ content }}
+  </section>
 
-     <aside style="flex: 1; max-height: 400px; overflow-y: auto; border-left: 1px solid #ccc; padding-left: 10px;">
-       <h3>Latest Updates</h3>
-       <ul class="news-list">
-         <li><strong>May 2025:</strong> Published my flapping wing paper at AIAA SciTech!</li>
-         <li><strong>April 2025:</strong> Presented my jellyfish-inspired robot concept.</li>
-         <li><strong>Feb 2025:</strong> Started working on drone exploration using RL.</li>
-         <!-- Add more updates here -->
-          </ul>
-        </aside>
-      </div>
+  <!-- Sidebar -->
+  <aside style="flex: 1; max-height: 400px; overflow-y: auto; border-left: 2px solid #ccc; padding-left: 20px;">
+    <h3>Latest Updates</h3>
+    <ul style="list-style-type: disc; padding-left: 20px; font-size: 0.9em;">
+      <li><strong>May 2025:</strong> Published my flapping wing paper at AIAA SciTech!</li>
+      <li><strong>April 2025:</strong> Presented my jellyfish-inspired robot concept.</li>
+      <li><strong>Feb 2025:</strong> Started working on drone exploration using RL.</li>
+    </ul>
+  </aside>
+
+</div>
+
 
       <footer>
          {% if site.github.is_project_page %}
