@@ -6,15 +6,15 @@
 
 [Role of Asymmetry in Directional Manoeuvre of micro FWAV](/sample_page)
 <div style="display: flex; gap: 10px;">
-  <img src="images/fwav1.png?raw=true" alt="FWAV 1" style="width: 48%;">
-  <img src="images/fwav2.png?raw=true" alt="FWAV 2" style="width: 48%;">
+  <img src="images/fwav1.png?raw=true" alt="FWAV 1" style="width: 48%; height: auto; object-fit: contain;">
+  <img src="images/fwav2.png?raw=true" alt="FWAV 2" style="width: 48%; height: auto; object-fit: contain;">
 </div>
 
 ---
 [Biomimetic Jellyfish Actuated by Tendon-based Continuum Lappets](/pdf/sample_presentation.pdf)
 <div style="display: flex; gap: 10px;">
-  <img src="images/jellyfish1.jpeg?raw=true" alt="Jellyfish 1" style="width: 48%;">
-  <img src="images/jellyfish2.jpeg?raw=true" alt="Jellyfish 2" style="width: 48%;">
+  <img src="images/jellyfish1.jpeg?raw=true" alt="Jellyfish 1" style="width: 48%; height: auto; object-fit: contain;">
+  <img src="images/jellyfish2.jpeg?raw=true" alt="Jellyfish 2" style="width: 48%; height: auto; object-fit: contain;">
 </div>
 
 ---
