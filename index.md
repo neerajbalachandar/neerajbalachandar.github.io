@@ -9,7 +9,10 @@
 
 ---
 [Biomimetic Jellyfish Actuated by Tendon-based Continuum Lappets](/pdf/sample_presentation.pdf)
-<img src="images/jellyfish.jpg?raw=true"/>
+<div style="display: flex; gap: 10px;">
+  <img src="images/jellyfish1.jpeg?raw=true" alt="Jellyfish 1" style="width: 48%;">
+  <img src="images/jellyfish2.jpeg?raw=true" alt="Jellyfish 2" style="width: 48%;">
+</div>
 
 ---
 [Optimal Trajectory Planning for Drone to Drone Docking](http://example.com/)
