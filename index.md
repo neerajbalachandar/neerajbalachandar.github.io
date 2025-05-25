@@ -5,7 +5,7 @@
 ### Research
 
 [Role of Asymmetry in Directional Manoeuvre of micro FWAV](/sample_page)
-<img src="images/fwav.jpg?raw=true"/>
+<img src="images/fwav1.png?raw=true"/>
 
 ---
 [Biomimetic Jellyfish Actuated by Tendon-based Continuum Lappets](/pdf/sample_presentation.pdf)
