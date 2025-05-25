@@ -27,6 +27,6 @@
 
 ---
 [Launch and Recovery System for Sparus II AUV under a spectrum of sea state](http://example.com/)
-<img src="images/marine.jpg?raw=true"/>
+<img src="images/marine.png?raw=true"/>
 
 ---
