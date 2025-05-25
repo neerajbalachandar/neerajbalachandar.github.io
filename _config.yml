@@ -1,11 +1,11 @@
-title: John Doe # your name (or website title) here
+title: Neeraj Balachandar # your name (or website title) here
 logo: "/images/logo.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
+  Undergraduate MechE Student with a minor in Robotics at the Indian Institute of Technology Hyderabad
   <br><br>
   Second description 
   <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  <a href="https://www.linkedin.com/in/neeraj-balachandar-4a2777261/">View My LinkedIn Profile</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
