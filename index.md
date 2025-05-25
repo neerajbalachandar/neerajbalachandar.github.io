@@ -19,7 +19,7 @@
 
 ---
 [Optimal Trajectory Planning for Drone to Drone Docking](http://example.com/)
-<img src="images/docking.jpg?raw=true"/>
+<img src="images/docking.png?raw=true"/>
 
 ---
 [Multi-Agent Drone Coordination for Entity Rescue Missions](http://example.com/)
