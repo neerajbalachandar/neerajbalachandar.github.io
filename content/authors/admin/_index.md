@@ -114,30 +114,30 @@ skills:
         description: ''
         percent: 100
         icon: chart-bar
-      - name: Julia
-        description: ''
-        percent: 40
-        icon: circle-stack
-      - name: MATLAB
-        description: ''
-        percent: 40
-        icon: circle-stack
-      - name: Arduino/ESP-32
-        description: ''
-        percent: 40
-        icon: circle-stack
-      - name: Autodesk Fusion, SolidWorks
-        description: ''
-        percent: 40
-        icon: circle-stack
-      - name: Ansys Fluent, Simulia Abaqus
-        description: ''
-        percent: 40
-        icon: circle-stack
-      - name: ROS, Gazebo
-        description: ''
-        percent: 40
-        icon: circle-stack
+      # - name: Julia
+      #   description: ''
+      #   percent: 40
+      #   icon: circle-stack
+      # - name: MATLAB
+      #   description: ''
+      #   percent: 40
+      #   icon: circle-stack
+      # - name: Arduino/ESP-32
+      #   description: ''
+      #   percent: 40
+      #   icon: circle-stack
+      # - name: Autodesk Fusion, SolidWorks
+      #   description: ''
+      #   percent: 40
+      #   icon: circle-stack
+      # - name: Ansys Fluent, Simulia Abaqus
+      #   description: ''
+      #   percent: 40
+      #   icon: circle-stack
+      # - name: ROS, Gazebo
+      #   description: ''
+      #   percent: 40
+      #   icon: circle-stack
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
