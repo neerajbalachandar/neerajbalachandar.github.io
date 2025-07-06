@@ -46,8 +46,8 @@ interests:
 education:
   - area: Junior year Undergraduate in MechE  
     institution: Indian Institute of Technology, Hyderabad
-    date_start: 01-11-2022
-    date_end: 01-05-2027
+    date_start: 2022-11-01
+    date_end: 2027-05-01
     summary: |
 
     button:
@@ -70,7 +70,7 @@ work:
     company_name: Dynamical Systems and Control Lab
     company_url: ''
     company_logo: ''
-    date_start: 01-02-2024
+    date_start: 2024-02-01
     date_end: ''
     summary: |2-
       My Work:
@@ -81,8 +81,8 @@ work:
     company_name: Indian Institute of Science, Bengaluru
     company_url: ''
     company_logo: ''
-    date_start: 01-05-2024
-    date_end: 01-08-2024
+    date_start: 2024-05-01
+    date_end: 2024-08-01
     summary: |
       My Work:
       - Migrated infrastructure to a new data center
@@ -93,8 +93,8 @@ work:
     company_name: CIEDS-ENSTA, Ecole Polytechnique De Paris
     company_url: ''
     company_logo: ''
-    date_start: 01-11-2024
-    date_end: 01-03-2025
+    date_start: 2024-11-01
+    date_end: 2025-03-01
     summary: |
       My Work:
       - Migrated infrastructure to a new data center
@@ -114,30 +114,30 @@ skills:
         description: ''
         percent: 100
         icon: chart-bar
-      # - name: Julia
-      #   description: ''
-      #   percent: 40
-      #   icon: circle-stack
-      # - name: MATLAB
-      #   description: ''
-      #   percent: 40
-      #   icon: circle-stack
-      # - name: Arduino/ESP-32
-      #   description: ''
-      #   percent: 40
-      #   icon: circle-stack
-      # - name: Autodesk Fusion, SolidWorks
-      #   description: ''
-      #   percent: 40
-      #   icon: circle-stack
-      # - name: Ansys Fluent, Simulia Abaqus
-      #   description: ''
-      #   percent: 40
-      #   icon: circle-stack
-      # - name: ROS, Gazebo
-      #   description: ''
-      #   percent: 40
-      #   icon: circle-stack
+      - name: Julia
+        description: ''
+        percent: 40
+        icon: circle-stack
+      - name: MATLAB
+        description: ''
+        percent: 40
+        icon: circle-stack
+      - name: Arduino/ESP-32
+        description: ''
+        percent: 40
+        icon: circle-stack
+      - name: Autodesk Fusion, SolidWorks
+        description: ''
+        percent: 40
+        icon: circle-stack
+      - name: Ansys Fluent, Simulia Abaqus
+        description: ''
+        percent: 40
+        icon: circle-stack
+      - name: ROS, Gazebo
+        description: ''
+        percent: 40
+        icon: circle-stack
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
