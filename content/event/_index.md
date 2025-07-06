@@ -10,8 +10,6 @@ view: card
 image:
   caption: ''
   filename: 'talk1.jpeg'
-
-image:
   caption:''
   filename: 'talk2.jpeg'
 ---
