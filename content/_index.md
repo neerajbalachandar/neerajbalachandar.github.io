@@ -39,9 +39,9 @@ sections:
     design:
       columns: '1'
   - block: collection
-    id: papers
+    id: projects
     content:
-      title: Featured Publications
+      title: My Research
       filters:
         folders:
           - publication
