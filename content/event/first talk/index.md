@@ -20,4 +20,11 @@ featured: false
 url_slides: 'https://slideshare.net/2'
 projects:
   - example
+
+image:
+  caption: 'Blue Room, Hyatt, AS-08 session'
+  focal_point: Right
+  placement: 1 # Optional: controls placement
+  preview_only: false
+  filename: 'talk1.jpeg' # Place your image in `static/media/`
 ---

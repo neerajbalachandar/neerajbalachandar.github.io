@@ -20,4 +20,11 @@ featured: false
 url_slides: 'https://slideshare.net/2'
 projects:
   - example
+
+image:
+  caption: 'CIEDS-ENSTA, IP Paris'
+  focal_point: Right
+  placement: 2
+  preview_only: false
+  filename: 'talk2.jpeg'  # Image stored in static/media/
 ---
