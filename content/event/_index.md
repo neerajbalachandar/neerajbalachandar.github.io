@@ -1,13 +1,15 @@
 ---
-title: Recent Talks
-cms_exclude: true
-#url: talk
+title: "Talks & Events"
+type: landing
 
-# View
-view: card
-
-# Optional cover image (relative to `assets/media/` folder).
-image:
-  caption: ''
-  filename: 'talk1.jpeg'
+sections:
+  - block: collection
+    content:
+      title: My Talks & Events
+      filters:
+        folders:
+          - event
+    design:
+      view: article-grid
+      columns: 2
 ---
