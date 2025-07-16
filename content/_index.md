@@ -26,25 +26,17 @@ sections:
           # Add your image background to `assets/media/`.
           filename: bg.jpeg
           filters:
-            brightness: 1.0
+            brightness: 0.5
           size: cover
           position: center
           parallax: false
-  - block: markdown
-    content:
-      title: 'My Research'
-      subtitle: ''
-      text: |-
-        My work 
-    design:
-      columns: '1'
   - block: collection
     id: projects
     content:
       title: My Research
       filters:
         folders:
-          - publication
+          - project
         featured_only: true
     design:
       view: article-grid
