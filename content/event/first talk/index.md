@@ -17,7 +17,7 @@ publishDate: '2025-01-10T00:00:00Z'
 authors:
   - admin
 featured: false
-url_slides: 'https://slideshare.net/2'
+url_slides: 'https://drive.google.com/file/d/1OwyFHpCPqcExUfIzXJJbK7UCsNtkkYjc/view?usp=sharing'
 projects:
   - example
 
