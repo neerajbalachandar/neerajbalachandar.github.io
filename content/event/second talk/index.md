@@ -1,19 +1,19 @@
 ---
-title: Example Talk 2
-event: Hugo Blox Builder Workshop
+title: Swarm Rescue Event
+event: Swarm Rescue Challenge
 event_url: https://example.org
-location: Hugo Blox Builder HQ
+location: CIEDS, Ecole Polytechnique De Paris
 address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
+  street: CIEDS, IP Paris
+  city: Route De Saclay
+  region: Paris
   postcode: '94305'
-  country: United States
-summary: This is the second example talk.
-abstract: Abstract for talk 2.
-date: '2030-07-01T13:00:00Z'
-date_end: '2030-07-01T15:00:00Z'
-publishDate: '2017-01-01T00:00:00Z'
+  country: France
+summary: Talk 2
+abstract: Abstract
+date: '2025-04-01T13:00:00Z'
+date_end: '2025-04-01T15:00:00Z'
+publishDate: '2025-04-01T00:00:00Z'
 authors:
   - admin
 featured: false
