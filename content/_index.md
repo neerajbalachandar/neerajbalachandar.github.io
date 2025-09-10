@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/resume.pdf
+        url: uploads/neeraj_cv.pdf
     design:
       css_class: dark
       background:
@@ -30,25 +30,31 @@ sections:
           size: cover
           position: center
           parallax: false
+
+
   - block: markdown
     content:
       title: 'My Research'
       subtitle: ''
-      text: |-
+      text:
         Hi
         Please reach out to collaborate
     design:
       columns: '1'
+
+
   - block: collection
     content:
       title: Recent Publications
-      text: ""
+      text: "These are some of the recent publications:"
       filters:
         folders:
           - publication
         exclude_featured: false
     design:
       view: citation
+
+
   - block: collection
     id: talks
     content:
@@ -59,6 +65,8 @@ sections:
     design:
       view: article-grid
       columns: 2
+
+
   - block: collection
     id: news
     content:
@@ -88,6 +96,8 @@ sections:
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
+
+        
   - block: cta-card
     demo: true # Only display this section in the Hugo Blox Builder demo site
     content:
