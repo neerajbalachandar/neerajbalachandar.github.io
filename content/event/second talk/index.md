@@ -1,5 +1,5 @@
 ---
-title: Swarm Rescue Event
+title: CIEDS, Ecole Polytechnique de Paris, Swarm Rescue Challenge
 event: Swarm Rescue Challenge
 event_url: https://example.org
 location: CIEDS, Ecole Polytechnique De Paris
