@@ -31,12 +31,22 @@ sections:
           position: center
           parallax: false
   - block: collection
-    id: projects
+    id: project
     content:
-      title: My Research
+      title: 'My Research'
+      subtitle: ''
+      text: |-
+        Hi,
+        Please reach out to collaborate 😃
+    design:
+      columns: '1'
+  - block: collection
+    id: papers
+    content:
+      title: Featured Publications
       filters:
         folders:
-          - project
+          - publication
         featured_only: true
     design:
       view: article-grid
