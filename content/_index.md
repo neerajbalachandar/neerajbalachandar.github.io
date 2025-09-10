@@ -36,7 +36,7 @@ sections:
       subtitle: ''
       text: |-
         Hi
-        Please reach out to collaborate 😃
+        Please reach out to collaborate
     design:
       columns: '1'
   - block: collection
