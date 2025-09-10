@@ -36,7 +36,7 @@ sections:
       title: 'My Research'
       subtitle: ''
       text: |-
-        Hi,
+        Hi
         Please reach out to collaborate 😃
     design:
       columns: '1'
