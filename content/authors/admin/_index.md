@@ -21,7 +21,7 @@ role: Undergraduate Student
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Indian Insititue of Technology Hyderabad
+  - name: Indian Institute of Technology Hyderabad
     url: www.iith.ac.in
 
 # Social network links
@@ -38,7 +38,9 @@ profiles:
     url: https://scholar.google.com/citations?user=r2Zut8kAAAAJ&hl=en
 
 interests:
-  - Robotics and Applied Controls
+  - Partial Differential Equations
+  - Optimal Control
+  - Data-driven modeling
   - Fluid Dynamics and Unsteady Aerodynamics
   - Complex Systems and Non-linear Dynamics
   - Fluid Structure Interaction
