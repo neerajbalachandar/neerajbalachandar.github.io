@@ -44,6 +44,7 @@ sections:
 
 
   - block: collection
+    id: project
     content:
       title: Recent Publications
       text: "These are some of the recent publications:"
