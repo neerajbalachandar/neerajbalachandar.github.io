@@ -8,7 +8,7 @@ design:
 
 # Note: `username` refers to the user's folder name in `content/authors/`
 
-# Page sections
+# Page section
 sections:
   - block: resume-experience
     content:
