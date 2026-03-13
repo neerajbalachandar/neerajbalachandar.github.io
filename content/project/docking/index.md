@@ -1,12 +1,11 @@
 ---
-title: Optimal Control for Drone Docking
+title: Sequential Convex Programming for Drone Docking
 date: 2025-09-11
-summary: "Optimal control formulations for safe, efficient docking trajectories under dynamic and actuator constraints."
+summary: "Generated optimal thrust profiles under convexified safety constraints and environmental disturbances."
 tags:
   - ongoing
   - optimal-control
   - robotics
-  - nonlinear-dynamics
 links:
   - name: Code
     url: https://github.com/neerajbalachandar/Optimal-Control-Trajectory-for-Drone-Docking
@@ -15,19 +14,9 @@ image:
   focal_point: Center
 ---
 
-This project investigates optimal control strategies for precise drone docking. The emphasis is on generating feasible trajectories that respect vehicle dynamics, actuator limits, and safe approach conditions while remaining smooth and robust to small disturbances.
+This project develops sequential convex programming formulations for drone-to-drone docking. The focus is on safe, feasible trajectories that respect disturbance bounds and actuator limits while preserving computational tractability.
 
-## Research Questions
-- How can docking trajectories be optimized for both safety and time/energy efficiency?
-- Which constraints are essential to ensure feasibility without over-constraining the solution?
-
-## Approach
-- Nonlinear dynamics modeling and trajectory optimization
-- Constraint-aware formulation for docking geometry and actuator limits
-- Sensitivity checks to assess robustness against initial condition variations
-
-## Current Status
-Ongoing. The current focus is refining constraint formulations and comparing optimization objectives.
-
-## Tools
-Python, numerical optimization, and simulation-based validation.
+## Highlights
+- Convexified constraints for safety and docking geometry
+- Robust thrust profiles under bounded disturbances
+- Numerical validation on docking scenarios

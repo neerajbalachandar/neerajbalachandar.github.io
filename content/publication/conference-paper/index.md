@@ -1,35 +1,32 @@
 ---
-title: "Technical Report: Optimal Control for Drone Docking"
+title: "Physics Informed Fourier Neural Operator to Map Reformulated Vortex Particle Field to Eulerian Velocity Field"
 
 authors:
   - admin
 
-date: '2025-10-01T00:00:00Z'
-doi: ''
+date: '2026-07-01T00:00:00Z'
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2025-10-01T00:00:00Z'
+publishDate: '2026-07-01T00:00:00Z'
 
-# Publication type.
-publication_types: ['report']
+publication_types: ['paper-conference']
 
-# Publication name and optional abbreviated publication name.
-publication: "Technical report (in preparation)"
-publication_short: "Report"
+publication: "Accepted for presentation at TSFP14, Heidelberg, Germany (July 2026)"
+publication_short: "TSFP14 2026"
 
 abstract: |-
-  This report summarizes an optimal control formulation for safe and efficient drone docking. The emphasis is on feasibility under actuator constraints and robustness to small perturbations, with an eye toward control-friendly trajectories.
+  This work develops a physics-informed Fourier neural operator to map reformulated vortex particle fields to Eulerian velocity fields, enabling efficient reconstruction for downstream analysis and control.
 
-summary: "A technical report describing optimal control formulations for drone docking (in preparation)."
+summary: "Physics-informed Fourier neural operator for mapping vortex particle fields to Eulerian velocity."
 
 tags:
-  - optimal-control
-  - robotics
+  - neural-operators
+  - pde
 
-featured: false
+featured: true
 
 url_pdf: ''
-url_code: 'https://github.com/neerajbalachandar/Optimal-Control-Trajectory-for-Drone-Docking'
+url_code: ''
 url_dataset: ''
 url_poster: ''
 url_project: ''
@@ -37,11 +34,10 @@ url_slides: ''
 url_source: ''
 url_video: ''
 
-# Associated Projects (optional).
 projects:
-  - docking
+  - neural-operator-surrogates
 
 slides: ""
 ---
 
-This technical report is in preparation. It will document the modeling assumptions, optimization setup, and validation experiments for the docking trajectories.
+Accepted for presentation at TSFP14 (Heidelberg, Germany, July 2026).

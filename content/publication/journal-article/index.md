@@ -1,33 +1,31 @@
 ---
-title: "Manuscript in Preparation: Aeroelastic Coupling with Variable-fidelity Flow Models"
+title: "VarFIExI - A Variable-Fidelity Framework for Unsteady Aeroelastic Coupling"
 
 authors:
   - admin
 
-date: '2025-11-01T00:00:00Z'
-doi: ''
+date: '2025-12-01T00:00:00Z'
 
-publishDate: '2025-11-01T00:00:00Z'
+publishDate: '2025-12-01T00:00:00Z'
 
 publication_types: ['article']
 
-publication: "Manuscript in preparation"
-publication_short: "In prep"
+publication: "In process for submission in Computer Methods in Applied Mechanics and Engineering"
+publication_short: "CMAME (in process)"
 
 abstract: |-
-  This manuscript studies aeroelastic coupling between variable-fidelity vortex particle method (VPM) flow solvers and structural dynamics. The goal is to quantify the fidelity required to capture key aeroelastic phenomena while preserving computational efficiency.
+  VarFIExI introduces a variable-fidelity framework for unsteady aeroelastic coupling, combining meshless vortex particle methods with structural solvers for efficient analysis.
 
-summary: "A manuscript in preparation on aeroelastic coupling with variable-fidelity flow solvers."
+summary: "Variable-fidelity framework for unsteady aeroelastic coupling (in process)."
 
 tags:
   - aeroelasticity
   - fluid-structure-interaction
-  - vpm
 
 featured: false
 
 url_pdf: ''
-url_code: 'https://github.com/neerajbalachandar/reformulated-VPM-Julia-lang-simulations-FLOWUnsteady-'
+url_code: ''
 url_dataset: ''
 url_poster: ''
 url_project: ''
@@ -41,4 +39,4 @@ projects:
 slides: ""
 ---
 
-Manuscript in preparation. The write-up will include coupling stability analysis, benchmark cases, and sensitivity studies across fidelity levels.
+In process for submission to Computer Methods in Applied Mechanics and Engineering.

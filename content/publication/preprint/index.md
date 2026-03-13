@@ -1,33 +1,31 @@
 ---
-title: "Working Paper: Low-fidelity Modeling of Chaotic Wakes"
+title: "Adaptive Trajectory Planning with Sequential Convex Programming for Drone-to-Drone Docking"
 
 authors:
   - admin
 
-date: "2025-08-15T00:00:00Z"
-doi: ""
+date: '2026-01-01T00:00:00Z'
 
-publishDate: "2025-08-15T00:00:00Z"
+publishDate: '2026-01-01T00:00:00Z'
 
-publication_types: ["article"]
+publication_types: ['paper-conference']
 
-publication: "Working paper"
-publication_short: "WP"
+publication: "Accepted for presentation at AIAA SciTech 2026, Session IS-24: Autonomy III, Orlando, USA"
+publication_short: "AIAA SciTech 2026"
 
 abstract: |-
-  This working paper investigates low-fidelity vortex particle models for chaotic wakes in flapping-wing flows. The study focuses on which wake features must be preserved to maintain predictive accuracy for control-oriented modeling.
+  Presents an adaptive sequential convex programming framework for drone-to-drone docking, emphasizing safety constraints, disturbance robustness, and computational efficiency.
 
-summary: "Working paper on low-fidelity vortex particle modeling of chaotic wakes."
+summary: "Sequential convex programming framework for adaptive drone docking."
 
 tags:
-  - unsteady-aerodynamics
-  - vpm
+  - optimal-control
+  - robotics
 
-featured: true
+featured: false
 
-links: []
 url_pdf: ''
-url_code: 'https://github.com/neerajbalachandar/micro-Flapping-Wing-Aerial-Vehicle'
+url_code: ''
 url_dataset: ''
 url_poster: ''
 url_project: ''
@@ -35,15 +33,10 @@ url_slides: ''
 url_source: ''
 url_video: ''
 
-image:
-  caption: ''
-  focal_point: ""
-  preview_only: true
-
 projects:
-  - flapping
+  - docking
 
 slides: ""
 ---
 
-Working paper in preparation. The current draft outlines the modeling approach, fidelity trade-offs, and wake feature analysis.
+Accepted for presentation at AIAA SciTech 2026 (Session IS-24: Autonomy III).

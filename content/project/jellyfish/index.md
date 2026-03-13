@@ -1,11 +1,10 @@
 ---
-title: Analytical Model for a Biomimetic Jellyfish Driven by Tendons
+title: Analytical Model for Soft Robotic Membranes
 date: 2025-09-11
-summary: "Analytical modeling of tendon-driven actuation for a biomimetic jellyfish propulsion concept."
+summary: "Analytically modeled paddling using Cosserat rod theory and Lighthill's hydrodynamic theory; validated with immersed boundary simulations."
 tags:
-  - past
+  - ongoing
   - bio-inspired
-  - dynamics
   - modeling
 links:
   - name: Code
@@ -15,19 +14,9 @@ image:
   focal_point: Center
 ---
 
-This project develops an analytical model for a tendon-driven, biomimetic jellyfish. The aim is to capture the essential actuation and propulsion dynamics with a compact model that can guide design choices and control strategies.
+This project develops analytical models for tendon-actuated soft membranes inspired by jellyfish propulsion. The goal is to capture dominant deformation and propulsion mechanisms with compact, interpretable models.
 
-## Research Questions
-- Which modeling simplifications preserve the dominant actuation dynamics?
-- How does tendon actuation affect thrust production and efficiency?
-
-## Approach
-- Analytical modeling of tendon actuation and body deformation
-- Reduced-order dynamics for fast simulation and parameter sweeps
-- Qualitative comparison with known jellyfish propulsion characteristics
-
-## Status
-Archived. The model provides a baseline for future bio-inspired propulsion studies.
-
-## Tools
-Analytical modeling and numerical validation.
+## Highlights
+- Cosserat rod modeling of membrane deformation
+- Hydrodynamic force estimation via Lighthill's theory
+- Validation using immersed boundary simulations

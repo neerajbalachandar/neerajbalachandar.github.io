@@ -78,7 +78,7 @@ sections:
     content:
       title: Recent Publications
       text: "Selected manuscripts and technical reports. [View all publications](/publication/)"
-      count: 3
+      count: 6
       filters:
         folders:
           - publication

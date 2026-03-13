@@ -12,7 +12,7 @@ on:
 
 # Provide permission to clone the repo and deploy it to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -55,6 +55,12 @@ jobs:
       uses: actions/upload-pages-artifact@v3
       with:
         path: ./public
+    - name: Deploy to gh-pages branch (fallback)
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+        publish_branch: gh-pages
 
   # Deploy website to GitHub Pages hosting
   deploy:

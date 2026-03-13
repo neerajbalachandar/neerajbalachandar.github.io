@@ -13,7 +13,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Undergraduate Researcher (Mechanical Engineering)
+role: Dual Degree (BTech + MTech)
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -34,20 +34,23 @@ profiles:
     url: https://scholar.google.com/citations?user=r2Zut8kAAAAJ&hl=en
 
 interests:
-  - Partial Differential Equations
-  - Optimal Control
-  - Data-driven modeling
-  - Fluid Dynamics and Unsteady Aerodynamics
-  - Complex Systems and Non-linear Dynamics
-  - Fluid Structure Interaction
+  - Fluid dynamics and FSI
+  - Optimal control and Convex Optimization
+  - Data-driven models and ROMs
+  - Deep Learning
+  - PDEs and Operator Learning
+  - Information Theory and Probability
+  # - Turbulence
+  - Complex systems and nonlinear dynamics
+  # - Fluid Structure Interaction and Unsteady aerodynamics
 
 education:
-  - area: Junior year Undergraduate in MechE  
+  - area: Senior year Undergrad
     institution: Indian Institute of Technology, Hyderabad
     date_start: 2022-11-01
     date_end: 2027-05-01
     summary: |
-      Minor in Robotics. Focused coursework in dynamics, control, and fluid mechanics.
+      Placeholder
 
     button:
       text: 'Read Thesis'
@@ -65,17 +68,29 @@ education:
   #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 work:
-  - position: Research student
-    company_name: Dynamical Systems and Control Lab
+  - position: Research Student
+    company_name: Dynamics and Control Lab, IIT Hyderabad
     company_url: ''
     company_logo: ''
-    date_start: 2024-02-01
+    date_start: 2024-01-01
     date_end: ''
     summary: |2-
-      Focus areas:
-      - Reduced-order modeling and optimal control for unsteady flows
-      - Data-driven identification of nonlinear dynamics
-      - Scientific computing in Python and Julia
+      - Developing high-fidelity reformulated vortex particle method (rVPM) simulations to characterize unsteady flapping-wing wakes and analyze vortex evolution.
+      - Investigating neural operators, PINNs, DMD, and SINDy for efficient PDE learning and reduced post-processing cost.
+      - Developing a Julia-based aeroelastic solver coupling FEM and rVPM using implicit and partitioned explicit coupling techniques.
+      - Designed a sequential convex programming framework for drone-to-drone docking under safety and disturbance constraints.
+      - Modeled tendon-actuated soft membranes for biomimetic jellyfish propulsion.
+      - Conducted experiments for validation of computational models.
+  - position: Swarm Rescue Challenge
+    company_name: CIEDS, Ecole Polytechnique de Paris
+    company_url: ''
+    company_logo: ''
+    date_start: 2024-11-01
+    date_end: 2025-03-01
+    summary: |2-
+      - Developed autonomous swarm exploration and rescue algorithms under communication constraints.
+      - Implemented obstacle-aware navigation, coordinated swarm motion, and resource-bounded decision logic.
+      - Achieved an average of 4.5 rescues per 2000 simulation steps across four maps.
   - position: Research Intern
     company_name: Indian Institute of Science, Bengaluru
     company_url: ''
@@ -83,21 +98,18 @@ work:
     date_start: 2024-05-01
     date_end: 2024-08-01
     summary: |2-
-      Focus areas:
-      - Unsteady aerodynamics and wake dynamics
-      - Low-fidelity simulation and validation workflows
-      - Reproducible research pipelines
-
-  - position: Evaluator
-    company_name: CIEDS-ENSTA, Ecole Polytechnique De Paris
+      - Investigated fatigue in muscle activity under simulated microgravity conditions.
+      - Developed a wearable exoskeleton to emulate near-microgravity environments.
+      - Validated biomechanical models using OpenSim and EMG time-series data. Motion capture was used to capture the precise action.
+  - position: Teaching Assistant - Spacecraft Dynamics and Control
+    company_name: IIT Hyderabad
     company_url: ''
     company_logo: ''
-    date_start: 2024-11-01
-    date_end: 2025-03-01
+    date_start: 2026-01-01
+    date_end: 2026-05-01
     summary: |2-
-      Focus areas:
-      - Evaluation of swarm autonomy strategies in simulation
-      - Benchmarking mission performance and robustness
+      - Assisted in delivering coursework on rigid-body attitude dynamics, orbital mechanics, and nonlinear spacecraft control.
+      - Conducted problem-solving sessions and supported Python-based simulation assignments.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -180,4 +192,4 @@ awards:
 
 ## About Me
 
-I am a junior year undergraduate in Mechanical Engineering with a minor in Robotics at IIT Hyderabad. I enjoy bridging theory and computation to study unsteady flows, control, and fluid-structure interaction. This site highlights my research focus, projects, and recent updates.
+I am a senior year undergraduate in Mechanical Engineering with a minor in Robotics at IIT Hyderabad. I enjoy bridging theory and computation. My research approach is rooted in first-principles, modelling, deriving structure from governing equations, before introducing numerical approximations. I love approaching complex systems from a geometric, intuitive approach prior to learning the system. This portfolio highlights my research focus, projects, and recent updates.
