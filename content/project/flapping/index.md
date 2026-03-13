@@ -10,7 +10,7 @@ links:
   - name: Code
     url: https://github.com/neerajbalachandar/micro-Flapping-Wing-Aerial-Vehicle
 image:
-  filename: featured.svg
+  filename: featured.png
   focal_point: Center
 ---
 

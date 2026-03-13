@@ -10,7 +10,7 @@ links:
   - name: Code
     url: https://github.com/neerajbalachandar/reformulated-VPM-Julia-lang-simulations-FLOWUnsteady-
 image:
-  filename: featured.svg
+  filename: featured.png
   focal_point: Center
 ---
 

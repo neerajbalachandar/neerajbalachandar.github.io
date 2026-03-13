@@ -7,7 +7,7 @@ tags:
   - swarm-robotics
   - planning
 image:
-  filename: featured.svg
+  filename: featured.png
   focal_point: Center
 ---
 

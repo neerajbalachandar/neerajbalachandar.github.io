@@ -6,7 +6,7 @@ tags:
   - past
   - biomechanics
 image:
-  filename: featured.svg
+  filename: featured.png
   focal_point: Center
 ---
 

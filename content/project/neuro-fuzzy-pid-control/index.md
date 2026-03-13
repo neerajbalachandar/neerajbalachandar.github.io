@@ -6,7 +6,7 @@ tags:
   - past
   - control
 image:
-  filename: featured.svg
+  filename: featured.png
   focal_point: Center
 ---
 

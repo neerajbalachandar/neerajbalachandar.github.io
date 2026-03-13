@@ -7,7 +7,7 @@ tags:
   - neural-operators
   - reduced-order-modeling
 image:
-  filename: featured.svg
+  filename: featured.png
   focal_point: Center
 ---
 
