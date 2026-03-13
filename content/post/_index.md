@@ -1,4 +1,6 @@
 ---
-title: Blog
-view: article-grid
+title: News
+view: list
 ---
+
+Short updates on research progress, talks, and milestones.

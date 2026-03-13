@@ -1,13 +1,33 @@
 ---
-title: Analytical model for a Biomimetic Jellyfish driven by Tendons
+title: Analytical Model for a Biomimetic Jellyfish Driven by Tendons
 date: 2025-09-11
-external_link: https://github.com/neerajbalachandar/Biomimetic-Jellyfish
+summary: "Analytical modeling of tendon-driven actuation for a biomimetic jellyfish propulsion concept."
 tags:
-  - Hugo
-  - Wowchemy
-  - Markdown
+  - past
+  - bio-inspired
+  - dynamics
+  - modeling
+links:
+  - name: Code
+    url: https://github.com/neerajbalachandar/Biomimetic-Jellyfish
+image:
+  filename: featured.svg
+  focal_point: Center
 ---
 
-Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.
+This project develops an analytical model for a tendon-driven, biomimetic jellyfish. The aim is to capture the essential actuation and propulsion dynamics with a compact model that can guide design choices and control strategies.
 
-<!--more-->
+## Research Questions
+- Which modeling simplifications preserve the dominant actuation dynamics?
+- How does tendon actuation affect thrust production and efficiency?
+
+## Approach
+- Analytical modeling of tendon actuation and body deformation
+- Reduced-order dynamics for fast simulation and parameter sweeps
+- Qualitative comparison with known jellyfish propulsion characteristics
+
+## Status
+Archived. The model provides a baseline for future bio-inspired propulsion studies.
+
+## Tools
+Analytical modeling and numerical validation.

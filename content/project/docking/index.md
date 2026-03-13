@@ -1,13 +1,33 @@
 ---
 title: Optimal Control for Drone Docking
 date: 2025-09-11
-external_link: https://github.com/neerajbalachandar/Optimal-Control-Trajectory-for-Drone-Docking
+summary: "Optimal control formulations for safe, efficient docking trajectories under dynamic and actuator constraints."
 tags:
-  - Hugo
-  - Wowchemy
-  - Markdown
+  - ongoing
+  - optimal-control
+  - robotics
+  - nonlinear-dynamics
+links:
+  - name: Code
+    url: https://github.com/neerajbalachandar/Optimal-Control-Trajectory-for-Drone-Docking
+image:
+  filename: featured.svg
+  focal_point: Center
 ---
 
-Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.
+This project investigates optimal control strategies for precise drone docking. The emphasis is on generating feasible trajectories that respect vehicle dynamics, actuator limits, and safe approach conditions while remaining smooth and robust to small disturbances.
 
-<!--more-->
+## Research Questions
+- How can docking trajectories be optimized for both safety and time/energy efficiency?
+- Which constraints are essential to ensure feasibility without over-constraining the solution?
+
+## Approach
+- Nonlinear dynamics modeling and trajectory optimization
+- Constraint-aware formulation for docking geometry and actuator limits
+- Sensitivity checks to assess robustness against initial condition variations
+
+## Current Status
+Ongoing. The current focus is refining constraint formulations and comparing optimization objectives.
+
+## Tools
+Python, numerical optimization, and simulation-based validation.

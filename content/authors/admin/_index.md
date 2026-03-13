@@ -17,18 +17,18 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Undergraduate Student
+role: Undergraduate Researcher (Mechanical Engineering)
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
   - name: Indian Institute of Technology Hyderabad
-    url: www.iith.ac.in
+    url: https://www.iith.ac.in/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'neerajbalachandar@gmail.com'
+    url: 'mailto:neerajbalachandar@gmail.com'
     label: E-mail Me
   - icon: brands/github
     url: https://github.com/neerajbalachandar
@@ -51,6 +51,7 @@ education:
     date_start: 2022-11-01
     date_end: 2027-05-01
     summary: |
+      Minor in Robotics. Focused coursework in dynamics, control, and fluid mechanics.
 
     button:
       text: 'Read Thesis'
@@ -75,21 +76,21 @@ work:
     date_start: 2024-02-01
     date_end: ''
     summary: |2-
-      My Work:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      Focus areas:
+      - Reduced-order modeling and optimal control for unsteady flows
+      - Data-driven identification of nonlinear dynamics
+      - Scientific computing in Python and Julia
   - position: Research Intern
     company_name: Indian Institute of Science, Bengaluru
     company_url: ''
     company_logo: ''
     date_start: 2024-05-01
     date_end: 2024-08-01
-    summary: |
-      My Work:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    summary: |2-
+      Focus areas:
+      - Unsteady aerodynamics and wake dynamics
+      - Low-fidelity simulation and validation workflows
+      - Reproducible research pipelines
 
   - position: Evaluator
     company_name: CIEDS-ENSTA, Ecole Polytechnique De Paris
@@ -97,11 +98,10 @@ work:
     company_logo: ''
     date_start: 2024-11-01
     date_end: 2025-03-01
-    summary: |
-      My Work:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    summary: |2-
+      Focus areas:
+      - Evaluation of swarm autonomy strategies in simulation
+      - Benchmarking mission performance and robustness
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -184,4 +184,4 @@ awards:
 
 ## About Me
 
-I am a junior year undergrad student in MechE with a minor in Robotics in IIT Hyderabad. Welcome to my portfolio webpage. Have a good time scrolling through!
+I am a junior year undergraduate in Mechanical Engineering with a minor in Robotics at IIT Hyderabad. I enjoy bridging theory and computation to study unsteady flows, control, and fluid-structure interaction. This site highlights my research focus, projects, and recent updates.
