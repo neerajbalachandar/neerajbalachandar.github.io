@@ -38,7 +38,7 @@ interests:
   - Optimal control and Convex Optimization
   - Data-driven models and ROMs
   - Deep Learning
-  - PDEs and Operator Learning
+  # - PDEs and Operator Learning
   - Information Theory and Probability
   # - Turbulence
   - Complex systems and nonlinear dynamics
