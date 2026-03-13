@@ -20,36 +20,50 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/neeraj_cv.pdf
+        url: uploads/resume.pdf
     design:
+      css_class: dark
       background:
-        color: "#f7f7f5"
+        color: black
+        image:
+          filename: bg.jpeg
+          filters:
+            brightness: 0.5
+          size: cover
+          position: center
+          parallax: false
 
-  - block: markdown
-    id: research
+  - block: features
+    id: research-focus
     content:
       title: Research Focus
-      subtitle: "Physics-informed models that remain practical for control and design"
-      text: |-
-        I work at the intersection of physics-based modeling and data-driven methods for complex, unsteady dynamics. My goal is to build models that are fast, interpretable, and grounded in the governing equations.
-
-        **Core themes**
-        - Partial differential equations and reduced-order modeling
-        - Optimal control for underactuated and bio-inspired systems
-        - Unsteady aerodynamics, vortex dynamics, and wake control
-        - Fluid-structure interaction and aeroelasticity
-        - Complex systems and nonlinear dynamics
-
-        **Methods I use**
-        - Low- and variable-fidelity simulation (e.g., vortex particle methods)
-        - Data-driven system identification and surrogate modeling
-        - Numerical optimization, stability analysis, and control design
+      items:
+        - name: Reduced-Order Modeling
+          description: Fast, interpretable models grounded in PDEs.
+          icon: chart-bar
+        - name: Optimal Control
+          description: Constraint-aware trajectories and stabilization.
+          icon: adjust-horizontal
+        - name: Unsteady Aerodynamics
+          description: Vortex dynamics, wakes, and flow control.
+          icon: wind
+        - name: Fluid-Structure Interaction
+          description: Coupled flow and structural dynamics.
+          icon: arrows-right-left
+        - name: Data-driven Modeling
+          description: System identification and surrogate models.
+          icon: cpu-chip
+        - name: Nonlinear Dynamics
+          description: Stability, bifurcations, and complex systems.
+          icon: sparkles
+    design:
+      columns: 3
 
   - block: collection
     id: ongoing
     content:
       title: Ongoing Research
-      text: "Active projects that I am currently developing."
+      text: "Active projects in progress. [View all projects](/projects/)"
       filters:
         folders:
           - project
@@ -60,10 +74,23 @@ sections:
       fill_image: true
 
   - block: collection
+    id: publications
+    content:
+      title: Recent Publications
+      text: "Selected manuscripts and technical reports. [View all publications](/publication/)"
+      count: 3
+      filters:
+        folders:
+          - publication
+        exclude_featured: false
+    design:
+      view: citation
+
+  - block: collection
     id: past
     content:
-      title: Past Research and Explorations
-      text: "Completed or archived projects."
+      title: Past / Small Projects
+      text: "Completed or exploratory work. [View all projects](/projects/)"
       filters:
         folders:
           - project
@@ -74,23 +101,11 @@ sections:
       fill_image: true
 
   - block: collection
-    id: publications
-    content:
-      title: Publications and Manuscripts
-      text: "Selected manuscripts and technical reports (details below)."
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-    design:
-      view: citation
-
-  - block: collection
     id: news
     content:
-      title: Recent News
+      title: Recent Activity
       subtitle: ""
-      text: ""
+      text: "[View all news](/post/)"
       # Page type to display. E.g. post, talk, publication...
       page_type: post
       # Choose how many pages you would like to display (0 = all pages)
