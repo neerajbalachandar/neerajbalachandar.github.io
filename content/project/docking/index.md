@@ -10,7 +10,7 @@ links:
   - name: Code
     url: https://github.com/neerajbalachandar/Optimal-Control-Trajectory-for-Drone-Docking
 image:
-  filename: cover.png
+  filename: featured.png
   focal_point: Center
 ---
 

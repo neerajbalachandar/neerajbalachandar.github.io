@@ -10,7 +10,7 @@ links:
   - name: Code
     url: https://github.com/neerajbalachandar/Biomimetic-Jellyfish
 image:
-  filename: jellyfish.jpeg
+  filename: featured.png
   focal_point: Center
 ---
 

@@ -62,8 +62,9 @@ sections:
   - block: collection
     id: ongoing
     content:
-      title: Ongoing Research
-      text: "Active projects in progress. [View all projects](/projects/)"
+      title: Current Projects
+      text: "Active projects in progress."
+      count: 0
       filters:
         folders:
           - project
@@ -71,7 +72,7 @@ sections:
     design:
       view: article-grid
       columns: 3
-      fill_image: true
+      fill_image: false
 
   - block: collection
     id: publications
@@ -90,7 +91,7 @@ sections:
     id: past
     content:
       title: Past / Small Projects
-      text: "Completed or exploratory work. [View all projects](/projects/)"
+      text: "Completed or exploratory work."
       filters:
         folders:
           - project
@@ -98,7 +99,7 @@ sections:
     design:
       view: article-grid
       columns: 2
-      fill_image: true
+      fill_image: false
 
   - block: collection
     id: news

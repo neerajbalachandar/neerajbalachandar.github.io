@@ -26,7 +26,7 @@ sections:
     design:
       view: article-grid
       fill_image: true
-      columns: 2
+      columns: 3
 
   - block: collection
     content:
@@ -39,5 +39,5 @@ sections:
     design:
       view: article-grid
       fill_image: true
-      columns: 2
+      columns: 3
 ---
