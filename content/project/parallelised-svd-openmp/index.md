@@ -20,6 +20,12 @@ relevant_publications:
     url: /publication/
 ---
 
-{{< project-detail-image >}}
+## Problem
 
 Implemented and optimized a parallel SVD routine in C with OpenMP, focusing on scaling behavior and performance profiling.
+
+{{< project-detail-image >}}
+
+## Approach
+- Parallelized core matrix decomposition steps using OpenMP and optimized workload partitioning.
+- Benchmarked strong and weak scaling to identify bottlenecks and quantify speedup.

@@ -20,6 +20,12 @@ relevant_publications:
     url: /publication/
 ---
 
-{{< project-detail-image >}}
+## Problem
 
 Designed an exoskeleton system and validated muscle activity models under simulated microgravity conditions using biomechanical analysis.
+
+{{< project-detail-image >}}
+
+## Approach
+- Built a quasi-static biomechanical model for elbow flexion with exoskeleton interaction.
+- Compared simulated muscle activation trends against controlled experimental observations.

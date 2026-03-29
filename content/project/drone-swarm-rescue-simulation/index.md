@@ -21,11 +21,13 @@ relevant_publications:
     url: /publication/
 ---
 
-{{< project-detail-image >}}
+## Problem
 
 This project focuses on multi-agent rescue and transport in simulated environments. I explored navigation, coordination, and clustering methods for robust swarm behavior.
 
-## Highlights
+{{< project-detail-image >}}
+
+## Approach
 - Artificial potential fields for navigation
 - RRT-based transport strategies
 - Clustering comparisons (DBSCAN, K-means)

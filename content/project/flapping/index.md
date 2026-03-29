@@ -21,11 +21,13 @@ relevant_publications:
     url: /publication/flapping-actuator-system/
 ---
 
-{{< project-detail-image >}}
+## Problem
 
 This project studies chaotic wake evolution in flapping-wing flows. The goal is to extract low-dimensional descriptors that capture transitions to chaos and inform control-oriented modeling.
 
-## Highlights
+{{< project-detail-image >}}
+
+## Approach
 - Graph-based representation of vortex interactions
 - Information-theoretic metrics for chaos detection
 - Comparative analysis across operating regimes

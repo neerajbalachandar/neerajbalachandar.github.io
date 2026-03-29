@@ -9,7 +9,7 @@ tags:
   - reduced-order-modeling
 links:
   - name: GitHub
-    url: https://github.com/neerajbalachandar
+    url: https://github.com/neerajbalachandar/Flow-reconstruction-in-VPM-using-FNO
   - name: PPT
     url: /uploads/presentations/neural-operator-surrogates.pdf
 image:
@@ -21,11 +21,13 @@ relevant_publications:
     url: /publication/conference-paper/
 ---
 
-{{< project-detail-image >}}
+## Problem
 
 This project builds neural-operator-based surrogates for fast multipole vortex simulations. The emphasis is on conservation-preserving learning and super-resolution reconstruction of velocity fields.
 
-## Highlights
+{{< project-detail-image >}}
+
+## Approach
 - Neural operators for N-body vortex interactions
 - Conservation-aware training objectives
 - Super-resolution velocity reconstruction

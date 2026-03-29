@@ -20,6 +20,12 @@ relevant_publications:
     url: /publication/
 ---
 
-{{< project-detail-image >}}
+## Problem
 
 Developed a hydrodynamic model for the Sparus AUV and implemented a Simulink-based stabilization controller for underactuated dynamics.
+
+{{< project-detail-image >}}
+
+## Approach
+- Derived a reduced hydrodynamic model suitable for control-oriented simulation.
+- Implemented and tuned a Simulink stabilization loop for underactuated operating conditions.

@@ -21,11 +21,13 @@ relevant_publications:
     url: /publication/tendon-membranes-jellyfish/
 ---
 
-{{< project-detail-image >}}
+## Problem
 
 This project develops analytical models for tendon-actuated soft membranes inspired by jellyfish propulsion. The goal is to capture dominant deformation and propulsion mechanisms with compact, interpretable models.
 
-## Highlights
+{{< project-detail-image >}}
+
+## Approach
 - Cosserat rod modeling of membrane deformation
 - Hydrodynamic force estimation via Lighthill's theory
 - Validation using immersed boundary simulations

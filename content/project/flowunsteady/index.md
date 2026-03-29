@@ -9,7 +9,7 @@ tags:
   - fluid-structure-interaction
 links:
   - name: GitHub
-    url: https://github.com/neerajbalachandar/reformulated-VPM-Julia-lang-simulations-FLOWUnsteady-
+    url: https://github.com/neerajbalachandar/VarFLEXI-rVPM-Fenics
   - name: PPT
     url: /uploads/presentations/flowunsteady.pdf
 image:
@@ -21,11 +21,13 @@ relevant_publications:
     url: /publication/journal-article/
 ---
 
-{{< project-detail-image >}}
+## Problem
 
 VarFIExI is a variable-fidelity aeroelastic framework that couples vortex particle flow models with structural solvers. The aim is to retain key aeroelastic physics while keeping the computational cost low enough for design and control studies.
 
-## Highlights
+{{< project-detail-image >}}
+
+## Approach
 - rVPM flow solver coupled to FEM via preCICE
 - Implicit and partitioned explicit coupling strategies
 - Validation on benchmark aeroelastic cases

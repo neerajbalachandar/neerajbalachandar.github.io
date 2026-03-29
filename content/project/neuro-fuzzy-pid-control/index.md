@@ -20,6 +20,12 @@ relevant_publications:
     url: /publication/
 ---
 
-{{< project-detail-image >}}
+## Problem
 
 Developed a neuro-fuzzy-based adaptive PID controller for a 2R manipulator with varying trajectories, emphasizing stability and performance across operating conditions.
+
+{{< project-detail-image >}}
+
+## Approach
+- Designed a neuro-fuzzy adaptive tuning strategy to update PID gains under changing trajectories.
+- Evaluated tracking stability and control smoothness across multiple excitation profiles.
