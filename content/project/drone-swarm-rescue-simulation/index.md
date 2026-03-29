@@ -13,7 +13,7 @@ links:
   - name: PPT
     url: /uploads/presentations/drone-swarm-rescue-simulation.pdf
 image:
-  filename: featured.png
+  filename: drone swarm.png
   focal_point: Center
 detail_image: detail.png
 relevant_publications:

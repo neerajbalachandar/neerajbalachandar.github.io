@@ -34,23 +34,23 @@ profiles:
     url: https://scholar.google.com/citations?user=r2Zut8kAAAAJ&hl=en
 
 interests:
-  - Fluid dynamics and FSI
-  - Optimal control and Convex Optimization
-  - Data-driven models and ROMs
-  - Deep Learning
+  - Fluid Dynamics and FSI
+  - Scientific Computing and Deep Learning
+  - Optimal Control
+  - Complex Systems and Nonlinear Dynamics
+  - Robotics
   # - PDEs and Operator Learning
-  - Information Theory and Probability
+  # - Information Theory and Probability
   # - Turbulence
-  - Complex systems and nonlinear dynamics
+  # - Complex systems and nonlinear dynamics
   # - Fluid Structure Interaction and Unsteady aerodynamics
 
 education:
-  - area: Senior year Undergrad
+  - area: Dual Degree Student (BTech + MTech)
     institution: Indian Institute of Technology, Hyderabad
     date_start: 2022-11-01
     date_end: 2027-05-01
     summary: |
-      Placeholder
 
     button:
       text: 'Read Thesis'
@@ -113,57 +113,57 @@ work:
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
-skills:
-  - name: Programming Languages and Skills
-    items:
-      - name: Python
-        description: ''
-        percent: 80
-        icon: code-bracket
-      - name: C / C++
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: Julia
-        description: ''
-        percent: 40
-        icon: circle-stack
-      - name: MATLAB
-        description: ''
-        percent: 40
-        icon: circle-stack
-      - name: Arduino/ESP-32
-        description: ''
-        percent: 40
-        icon: circle-stack
-      - name: Autodesk Fusion, SolidWorks
-        description: ''
-        percent: 40
-        icon: circle-stack
-      - name: Ansys Fluent, Simulia Abaqus
-        description: ''
-        percent: 40
-        icon: circle-stack
-      - name: ROS, Gazebo
-        description: ''
-        percent: 40
-        icon: circle-stack
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Basketball 
-        description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Piano Grade 3
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Music
-        description: ''
-        percent: 80
-        icon: camera
+# skills:
+#   - name: Programming Languages and Skills
+#     items:
+#       - name: Python
+#         description: ''
+#         percent: 80
+#         icon: code-bracket
+#       - name: C / C++
+#         description: ''
+#         percent: 100
+#         icon: chart-bar
+#       - name: Julia
+#         description: ''
+#         percent: 40
+#         icon: circle-stack
+#       - name: MATLAB
+#         description: ''
+#         percent: 40
+#         icon: circle-stack
+#       - name: Arduino/ESP-32
+#         description: ''
+#         percent: 40
+#         icon: circle-stack
+#       - name: Autodesk Fusion, SolidWorks
+#         description: ''
+#         percent: 40
+#         icon: circle-stack
+#       - name: Ansys Fluent, Simulia Abaqus
+#         description: ''
+#         percent: 40
+#         icon: circle-stack
+#       - name: ROS, Gazebo
+#         description: ''
+#         percent: 40
+#         icon: circle-stack
+#   - name: Hobbies
+#     color: '#eeac02'
+#     color_border: '#f0bf23'
+#     items:
+#       - name: Basketball 
+#         description: ''
+#         percent: 60
+#         icon: person-simple-walk
+#       - name: Piano Grade 3
+#         description: ''
+#         percent: 100
+#         icon: cat
+#       - name: Music
+#         description: ''
+#         percent: 80
+#         icon: camera
 
 
 # Awards.
@@ -177,17 +177,12 @@ awards:
     awarder: CIEDS-ENSTA, Ecole Polytechnique de Paris
     icon: 
     summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
   - title: Summer Research Fellowship from Indian Academy of Sciences
     url: https://www.ias.ac.in/
     date: '2024-04-01'
     awarder: Indian Academy of Sciences
     icon: 
     summary: |
-      Learned:
-      - Synthesize your own blockchain solutions
-      - Gain an in-depth understanding of the specific mechanics of Bitcoin
-      - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
 ---
 
 ## About Me
