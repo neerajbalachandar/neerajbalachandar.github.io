@@ -1,24 +1,25 @@
 ---
 title: 'Research'
 date: 2024-05-19
+slug: research
+aliases:
+  - /projects/
 type: landing
 
 design:
   # Section spacing
-  spacing: '5rem'
+  spacing: '3rem'
 
 # Page sections
 sections:
-  - block: markdown
-    content:
-      title: Research Portfolio
-      text: |-
-        This page collects my ongoing and past research projects. Each project includes a short overview, methods, and links to code or reports when available.
-
   - block: collection
     content:
       title: Ongoing Projects
-      text: "Active projects that I am currently developing."
+      count: 0
+      sort_by: Params.weight
+      sort_ascending: true
+      archive:
+        enable: false
       filters:
         folders:
           - project
@@ -31,7 +32,11 @@ sections:
   - block: collection
     content:
       title: Past Projects
-      text: "Completed or archived projects."
+      count: 0
+      sort_by: Params.weight
+      sort_ascending: true
+      archive:
+        enable: false
       filters:
         folders:
           - project

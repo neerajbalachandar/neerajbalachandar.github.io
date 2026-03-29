@@ -1,0 +1,11 @@
+{{- $items := .Page.Params.relevant_publications -}}
+{{- if $items -}}
+<aside class="project-publications-panel">
+  <h3>Relevant Publications</h3>
+  <ul>
+    {{- range $items -}}
+    <li><a href="{{ .url | safeURL }}">{{ .title }}</a></li>
+    {{- end -}}
+  </ul>
+</aside>
+{{- end -}}

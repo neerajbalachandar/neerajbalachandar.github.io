@@ -1,1 +1,78 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+<style>
+  .container,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 1360px;
+  }
+
+  .article-container {
+    max-width: 1080px;
+  }
+
+  .home-section {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+
+  #ongoing .card-image img,
+  #past .card-image img,
+  .page-wrapper [id*="ongoing"] .card-image img,
+  .page-wrapper [id*="past"] .card-image img {
+    width: 100%;
+    min-height: 280px;
+    object-fit: cover;
+  }
+
+  #ongoing .card-simple img,
+  #past .card-simple img,
+  .page-wrapper [id*="ongoing"] .card-simple img,
+  .page-wrapper [id*="past"] .card-simple img {
+    width: 100%;
+    min-height: 280px;
+    object-fit: cover;
+  }
+
+  .project-publications-panel {
+    float: right;
+    width: min(34%, 380px);
+    margin: 0 0 1.25rem 1.5rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid #d8e5df;
+    border-radius: 12px;
+    background: #f7fbf9;
+  }
+
+  .project-publications-panel h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+  }
+
+  .project-publications-panel ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  .project-publications-panel li {
+    margin-bottom: 0.55rem;
+  }
+
+  .project-detail-figure {
+    margin: 0 0 1.25rem 0;
+  }
+
+  .project-detail-figure img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 992px) {
+    .project-publications-panel {
+      float: none;
+      width: 100%;
+      margin: 0 0 1rem 0;
+    }
+  }
+</style>

@@ -1,0 +1,11 @@
+{{- $detail := .Page.Params.detail_image -}}
+{{- if $detail -}}
+{{- $resource := .Page.Resources.GetMatch $detail -}}
+<figure class="project-detail-figure">
+  {{- if $resource -}}
+  <img src="{{ $resource.RelPermalink }}" alt="{{ .Page.Title }} detail image" loading="lazy">
+  {{- else -}}
+  <img src="{{ $detail | relURL }}" alt="{{ .Page.Title }} detail image" loading="lazy">
+  {{- end -}}
+</figure>
+{{- end -}}

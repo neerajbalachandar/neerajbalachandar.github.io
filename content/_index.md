@@ -6,7 +6,7 @@ type: landing
 
 design:
   # Default section spacing
-  spacing: "5rem"
+  spacing: "3rem"
 
 sections:
   - block: resume-biography-3
@@ -33,38 +33,15 @@ sections:
           position: center
           parallax: false
 
-  - block: features
-    id: research-focus
-    content:
-      title: Research Focus
-      items:
-        - name: Reduced-Order Modeling
-          description: Fast, interpretable models grounded in PDEs.
-          icon: chart-bar
-        - name: Optimal Control
-          description: Constraint-aware trajectories and stabilization.
-          icon: adjust-horizontal
-        - name: Unsteady Aerodynamics
-          description: Vortex dynamics, wakes, and flow control.
-          icon: wind
-        - name: Fluid-Structure Interaction
-          description: Coupled flow and structural dynamics.
-          icon: arrows-right-left
-        - name: Data-driven Modeling
-          description: System identification and surrogate models.
-          icon: cpu-chip
-        - name: Nonlinear Dynamics
-          description: Stability, bifurcations, and complex systems.
-          icon: sparkles
-    design:
-      columns: 3
-
   - block: collection
     id: ongoing
     content:
-      title: Current Projects
-      text: "Active projects in progress."
+      title: Ongoing Projects
       count: 0
+      sort_by: Params.weight
+      sort_ascending: true
+      archive:
+        enable: false
       filters:
         folders:
           - project
@@ -72,7 +49,7 @@ sections:
     design:
       view: article-grid
       columns: 3
-      fill_image: false
+      fill_image: true
 
   - block: collection
     id: publications
@@ -90,16 +67,50 @@ sections:
   - block: collection
     id: past
     content:
-      title: Past / Small Projects
-      text: "Completed or exploratory work."
+      title: Past Projects
+      count: 0
+      sort_by: Params.weight
+      sort_ascending: true
+      archive:
+        enable: false
       filters:
         folders:
           - project
         tag: past
     design:
       view: article-grid
-      columns: 2
-      fill_image: false
+      columns: 3
+      fill_image: true
+
+  - block: collection
+    id: notes
+    content:
+      title: Course Notes
+      count: 0
+      archive:
+        enable: false
+      filters:
+        folders:
+          - notes
+    design:
+      view: article-grid
+      columns: 3
+      fill_image: true
+
+  - block: collection
+    id: blogs
+    content:
+      title: Blogs
+      count: 0
+      archive:
+        enable: false
+      filters:
+        folders:
+          - blog
+    design:
+      view: article-grid
+      columns: 3
+      fill_image: true
 
   - block: collection
     id: news
