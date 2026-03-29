@@ -4,7 +4,7 @@ date: 2026-03-29
 weight: 1
 summary: "Template entry for uploading important course notes as PDFs."
 image:
-  filename: featured.svg
+  filename: featured.png
   focal_point: Center
 links:
   - name: PDF
