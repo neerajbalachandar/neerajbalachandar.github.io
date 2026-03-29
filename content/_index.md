@@ -83,46 +83,13 @@ sections:
       fill_image: true
 
   - block: collection
-    id: notes
-    content:
-      title: Course Notes
-      count: 0
-      archive:
-        enable: false
-      filters:
-        folders:
-          - notes
-    design:
-      view: article-grid
-      columns: 3
-      fill_image: true
-
-  - block: collection
-    id: blogs
-    content:
-      title: Blogs
-      count: 0
-      archive:
-        enable: false
-      filters:
-        folders:
-          - blog
-    design:
-      view: article-grid
-      columns: 3
-      fill_image: true
-
-  - block: collection
     id: news
     content:
       title: Recent Activity
       subtitle: ""
-      text: "[View all news](/post/)"
-      # Page type to display. E.g. post, talk, publication...
+      text: ""
       page_type: post
-      # Choose how many pages you would like to display (0 = all pages)
       count: 3
-      # Filter on criteria
       filters:
         author: ""
         category: ""
@@ -131,14 +98,26 @@ sections:
         exclude_future: false
         exclude_past: false
         publication_type: ""
-      # Choose how many pages you would like to offset by
       offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
       order: desc
     design:
-      # Choose a layout view
       view: date-title-summary
-      # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
+
+  - block: collection
+    id: notes-blogs
+    content:
+      title: Course Notes & Blogs
+      count: 0
+      archive:
+        enable: false
+      filters:
+        folders:
+          - notes
+          - blog
+    design:
+      view: article-grid
+      columns: 3
+      fill_image: true
 ---

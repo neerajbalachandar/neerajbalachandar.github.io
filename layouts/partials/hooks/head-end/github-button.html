@@ -1,4 +1,6 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+<link rel="icon" type="image/png" href="/uploads/favicon.png">
+<link rel="shortcut icon" type="image/png" href="/uploads/favicon.png">
 <style>
   .container,
   .container-lg,
@@ -12,32 +14,23 @@
   }
 
   .home-section {
-    padding-top: 2.25rem;
-    padding-bottom: 2.25rem;
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
   }
 
-  #ongoing .card-image img,
-  #past .card-image img,
-  .page-wrapper [id*="ongoing"] .card-image img,
-  .page-wrapper [id*="past"] .card-image img {
+  .card-image img,
+  .card-simple img {
     width: 100%;
-    min-height: 280px;
-    object-fit: cover;
-  }
-
-  #ongoing .card-simple img,
-  #past .card-simple img,
-  .page-wrapper [id*="ongoing"] .card-simple img,
-  .page-wrapper [id*="past"] .card-simple img {
-    width: 100%;
-    min-height: 280px;
-    object-fit: cover;
+    height: 290px;
+    object-fit: contain;
+    background: #f3f7f5;
   }
 
   .project-publications-panel {
-    float: right;
-    width: min(34%, 380px);
-    margin: 0 0 1.25rem 1.5rem;
+    position: sticky;
+    top: 5.5rem;
+    width: 100%;
+    margin: 0.8rem 0 0 0;
     padding: 1rem 1.1rem;
     border: 1px solid #d8e5df;
     border-radius: 12px;
@@ -63,16 +56,62 @@
     margin: 0 0 1.25rem 0;
   }
 
-  .project-detail-figure img {
+  .project-detail-figure img,
+  .article-page .article-header img,
+  .article-page .article-style img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
+  }
+
+  .article-page .share-box,
+  .article-page .article-share,
+  .article-page .network-icon,
+  .article-page .share,
+  .article-page .author-card,
+  .article-page .post-nav,
+  .article-page a[rel="prev"],
+  .article-page a[rel="next"] {
+    display: none !important;
   }
 
   @media (max-width: 992px) {
     .project-publications-panel {
-      float: none;
-      width: 100%;
-      margin: 0 0 1rem 0;
+      position: static;
+      margin: 0.8rem 0 1rem 0;
     }
   }
 </style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var panel = document.querySelector(".project-publications-panel");
+    if (panel) {
+      var toc = document.getElementById("TableOfContents");
+      var target = null;
+
+      if (toc) {
+        target = toc.closest("aside, nav, section, div") || toc.parentElement;
+      } else {
+        var candidates = Array.from(
+          document.querySelectorAll("aside, nav, section, div")
+        ).filter(function (el) {
+          return /On this page/i.test((el.textContent || "").trim());
+        });
+        if (candidates.length) target = candidates[0];
+      }
+
+      if (target) {
+        target.appendChild(panel);
+      }
+    }
+
+    document
+      .querySelectorAll("a[rel='prev'], a[rel='next']")
+      .forEach(function (a) {
+        var wrap = a.closest("nav, section, div");
+        if (wrap) wrap.remove();
+      });
+  });
+</script>
