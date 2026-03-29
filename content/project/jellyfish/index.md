@@ -1,7 +1,7 @@
 ---
 title: Analytical Model for Soft Robotic Membranes
 date: 2025-09-11
-weight: 4
+weight: 5
 summary: "Analytically modeled paddling using Cosserat rod theory and Lighthill's hydrodynamic theory; validated with immersed boundary simulations."
 tags:
   - ongoing
@@ -21,7 +21,6 @@ relevant_publications:
     url: /publication/tendon-membranes-jellyfish/
 ---
 
-{{< relevant-publications >}}
 {{< project-detail-image >}}
 
 This project develops analytical models for tendon-actuated soft membranes inspired by jellyfish propulsion. The goal is to capture dominant deformation and propulsion mechanisms with compact, interpretable models.

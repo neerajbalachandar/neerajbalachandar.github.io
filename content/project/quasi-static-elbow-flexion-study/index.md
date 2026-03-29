@@ -1,7 +1,7 @@
 ---
 title: Quasi-static Elbow Flexion Study
 date: 2024-06-01
-weight: 2
+weight: 3
 summary: "Designed an exoskeleton system and validated muscle activity models under simulated microgravity."
 tags:
   - past
@@ -20,7 +20,6 @@ relevant_publications:
     url: /publication/
 ---
 
-{{< relevant-publications >}}
 {{< project-detail-image >}}
 
 Designed an exoskeleton system and validated muscle activity models under simulated microgravity conditions using biomechanical analysis.

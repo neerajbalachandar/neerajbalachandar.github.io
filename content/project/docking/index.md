@@ -21,7 +21,6 @@ relevant_publications:
     url: /publication/preprint/
 ---
 
-{{< relevant-publications >}}
 {{< project-detail-image >}}
 
 This project develops sequential convex programming formulations for drone-to-drone docking. The focus is on safe, feasible trajectories that respect disturbance bounds and actuator limits while preserving computational tractability.

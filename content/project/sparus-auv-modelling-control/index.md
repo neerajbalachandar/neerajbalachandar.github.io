@@ -1,7 +1,7 @@
 ---
 title: Sparus AUV Modelling and Control
 date: 2024-06-01
-weight: 1
+weight: 8
 summary: "Developed a hydrodynamic model and Simulink-based stabilization controller for an underactuated AUV."
 tags:
   - past
@@ -20,7 +20,6 @@ relevant_publications:
     url: /publication/
 ---
 
-{{< relevant-publications >}}
 {{< project-detail-image >}}
 
 Developed a hydrodynamic model for the Sparus AUV and implemented a Simulink-based stabilization controller for underactuated dynamics.

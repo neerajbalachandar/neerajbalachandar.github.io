@@ -6,11 +6,11 @@
   .container-lg,
   .container-xl,
   .container-xxl {
-    max-width: 1360px;
+    max-width: 1480px;
   }
 
   .article-container {
-    max-width: 1080px;
+    max-width: 1240px;
   }
 
   .home-section {
@@ -21,7 +21,7 @@
   .card-image img,
   .card-simple img {
     width: 100%;
-    height: 290px;
+    height: 360px;
     object-fit: contain;
     background: #f3f7f5;
   }
@@ -30,17 +30,23 @@
     position: sticky;
     top: 5.5rem;
     width: 100%;
-    margin: 0.8rem 0 0 0;
+    margin: 1rem 0 0 0;
     padding: 1rem 1.1rem;
-    border: 1px solid #d8e5df;
+    border: 2px solid #0f766e;
+    border-left-width: 6px;
     border-radius: 12px;
-    background: #f7fbf9;
+    background: #fff9db;
+    box-shadow: 0 10px 24px rgba(15, 118, 110, 0.12);
   }
 
   .project-publications-panel h3 {
     margin-top: 0;
     margin-bottom: 0.75rem;
+    color: #065f46;
     font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
 
   .project-publications-panel ul {
@@ -66,14 +72,14 @@
     border-radius: 10px;
   }
 
-  .article-page .share-box,
-  .article-page .article-share,
-  .article-page .network-icon,
-  .article-page .share,
-  .article-page .author-card,
-  .article-page .post-nav,
-  .article-page a[rel="prev"],
-  .article-page a[rel="next"] {
+  main .share-box,
+  main .article-share,
+  main .network-icon,
+  main .share,
+  main .author-card,
+  main .post-nav,
+  main a[rel="prev"],
+  main a[rel="next"] {
     display: none !important;
   }
 
@@ -86,26 +92,18 @@
 </style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var panel = document.querySelector(".project-publications-panel");
-    if (panel) {
-      var toc = document.getElementById("TableOfContents");
-      var target = null;
-
-      if (toc) {
-        target = toc.closest("aside, nav, section, div") || toc.parentElement;
-      } else {
-        var candidates = Array.from(
-          document.querySelectorAll("aside, nav, section, div")
-        ).filter(function (el) {
-          return /On this page/i.test((el.textContent || "").trim());
-        });
-        if (candidates.length) target = candidates[0];
-      }
-
-      if (target) {
-        target.appendChild(panel);
-      }
-    }
+    document
+      .querySelectorAll(
+        "a[href*='facebook.com'], a[href*='twitter.com'], a[href*='x.com/intent'], a[href*='linkedin.com'], a[href*='wa.me'], a[href*='t.me']"
+      )
+      .forEach(function (a) {
+        var wrap = a.closest("li, span, div");
+        if (wrap) {
+          wrap.remove();
+        } else {
+          a.remove();
+        }
+      });
 
     document
       .querySelectorAll("a[rel='prev'], a[rel='next']")

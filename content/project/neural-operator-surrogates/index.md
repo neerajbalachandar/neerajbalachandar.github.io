@@ -1,7 +1,7 @@
 ---
 title: Neural Operator Surrogates for Fast Multipole Vortex Simulations
 date: 2025-09-11
-weight: 3
+weight: 4
 summary: "Developed conservation-preserving surrogate models for N-body vortex interactions enabling super-resolution velocity reconstruction."
 tags:
   - ongoing
@@ -21,7 +21,6 @@ relevant_publications:
     url: /publication/conference-paper/
 ---
 
-{{< relevant-publications >}}
 {{< project-detail-image >}}
 
 This project builds neural-operator-based surrogates for fast multipole vortex simulations. The emphasis is on conservation-preserving learning and super-resolution reconstruction of velocity fields.

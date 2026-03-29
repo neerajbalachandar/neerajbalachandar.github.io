@@ -14,9 +14,10 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: |-
-        I am an undergraduate researcher in Mechanical Engineering (Robotics minor) at IIT Hyderabad.
-        My work centers on data-driven modeling and optimal control for unsteady flows, aeroelasticity, and bio-inspired locomotion.
-        I am preparing PhD applications in the US and welcome research discussions and collaborations.
+        I am an undergraduate student in Indian Institute of Technology Hyderabad.
+        My research approach is rooted in first-principles modelling, deriving structure from governing equations,
+        before introducing numerical approximations. I love approaching complex systems from a
+        geometric, intuitive approach prior to learning the system.
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
@@ -38,7 +39,7 @@ sections:
     content:
       title: Ongoing Projects
       count: 0
-      sort_by: Params.weight
+      sort_by: weight
       sort_ascending: true
       archive:
         enable: false
@@ -48,8 +49,8 @@ sections:
         tag: ongoing
     design:
       view: article-grid
-      columns: 3
-      fill_image: true
+      columns: 2
+      fill_image: false
 
   - block: collection
     id: publications
@@ -69,7 +70,7 @@ sections:
     content:
       title: Past Projects
       count: 0
-      sort_by: Params.weight
+      sort_by: weight
       sort_ascending: true
       archive:
         enable: false
@@ -79,8 +80,8 @@ sections:
         tag: past
     design:
       view: article-grid
-      columns: 3
-      fill_image: true
+      columns: 2
+      fill_image: false
 
   - block: collection
     id: news
@@ -118,6 +119,6 @@ sections:
           - blog
     design:
       view: article-grid
-      columns: 3
-      fill_image: true
+      columns: 2
+      fill_image: false
 ---

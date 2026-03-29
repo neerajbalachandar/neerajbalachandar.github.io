@@ -1,0 +1,10 @@
+{{ with .Params.relevant_publications }}
+<div class="project-publications-panel project-publications-panel--toc" aria-label="Relevant Publications">
+  <h3>Relevant Publications</h3>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .url | safeURL }}">{{ .title }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

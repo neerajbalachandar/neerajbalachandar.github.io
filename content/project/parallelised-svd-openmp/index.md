@@ -1,7 +1,7 @@
 ---
 title: Parallelised SVD (C, OpenMP)
 date: 2024-06-01
-weight: 4
+weight: 10
 summary: "Achieved 5x speedup under strong scaling while maintaining near-linear weak scaling performance."
 tags:
   - past
@@ -20,7 +20,6 @@ relevant_publications:
     url: /publication/
 ---
 
-{{< relevant-publications >}}
 {{< project-detail-image >}}
 
 Implemented and optimized a parallel SVD routine in C with OpenMP, focusing on scaling behavior and performance profiling.

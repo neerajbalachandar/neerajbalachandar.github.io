@@ -1,7 +1,7 @@
 ---
 title: Chaotic Wake Dynamics of Flapping Wings
 date: 2025-09-11
-weight: 5
+weight: 6
 summary: "Modeled vortex evolution as time-varying weighted graphs and designed information-theoretic metrics to identify routes to chaos."
 tags:
   - ongoing
@@ -21,7 +21,6 @@ relevant_publications:
     url: /publication/flapping-actuator-system/
 ---
 
-{{< relevant-publications >}}
 {{< project-detail-image >}}
 
 This project studies chaotic wake evolution in flapping-wing flows. The goal is to extract low-dimensional descriptors that capture transitions to chaos and inform control-oriented modeling.

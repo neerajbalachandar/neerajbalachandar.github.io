@@ -3,4 +3,4 @@ title: Blog
 view: article-grid
 ---
 
-Long-form writing, technical reflections, and project deep dives.
+Research notes, course notes, and photography posts.

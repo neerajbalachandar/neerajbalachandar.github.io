@@ -1,6 +1,6 @@
 ---
 title: 'Research'
-date: 2024-05-19
+date: 2026-03-29
 slug: research
 aliases:
   - /projects/
@@ -16,7 +16,7 @@ sections:
     content:
       title: Ongoing Projects
       count: 0
-      sort_by: Params.weight
+      sort_by: weight
       sort_ascending: true
       archive:
         enable: false
@@ -26,14 +26,14 @@ sections:
         tag: ongoing
     design:
       view: article-grid
-      fill_image: true
-      columns: 3
+      fill_image: false
+      columns: 2
 
   - block: collection
     content:
       title: Past Projects
       count: 0
-      sort_by: Params.weight
+      sort_by: weight
       sort_ascending: true
       archive:
         enable: false
@@ -43,6 +43,6 @@ sections:
         tag: past
     design:
       view: article-grid
-      fill_image: true
-      columns: 3
+      fill_image: false
+      columns: 2
 ---

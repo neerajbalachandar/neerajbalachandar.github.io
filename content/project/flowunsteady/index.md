@@ -21,7 +21,6 @@ relevant_publications:
     url: /publication/journal-article/
 ---
 
-{{< relevant-publications >}}
 {{< project-detail-image >}}
 
 VarFIExI is a variable-fidelity aeroelastic framework that couples vortex particle flow models with structural solvers. The aim is to retain key aeroelastic physics while keeping the computational cost low enough for design and control studies.
