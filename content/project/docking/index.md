@@ -1,5 +1,5 @@
 ---
-title: Sequential Convex Programming for Drone Docking
+title: Nonlinear Model Predictive Control via Sequential Convex Programming for Drone-to-Drone Docking
 date: 2025-09-11
 summary: "Generated optimal thrust profiles under convexified safety constraints and environmental disturbances."
 tags:
@@ -10,7 +10,7 @@ links:
   - name: Code
     url: https://github.com/neerajbalachandar/Optimal-Control-Trajectory-for-Drone-Docking
 image:
-  filename: featured.png
+  filename: cover.png
   focal_point: Center
 ---
 

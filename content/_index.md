@@ -70,7 +70,7 @@ sections:
         tag: ongoing
     design:
       view: article-grid
-      columns: 2
+      columns: 3
       fill_image: true
 
   - block: collection

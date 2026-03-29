@@ -7,7 +7,7 @@ tags:
   - swarm-robotics
   - planning
 image:
-  filename: featured.png
+  filename: drone swarm.png
   focal_point: Center
 ---
 
