@@ -14,10 +14,10 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: |-
-        I am an undergraduate student in Indian Institute of Technology Hyderabad.
-        My research approach is rooted in first-principles modelling, deriving structure from governing equations,
-        before introducing numerical approximations. I love approaching complex systems from a
-        geometric, intuitive approach prior to learning the system.
+        My name is Neeraj Balachandar, and I am a dual-degree student in Mechanical and Aerospace Engineering with a minor in Robotics at the Indian Institute         of Technology Hyderabad. My primary areas of research are scientific computing, nonlinear dynamics, optimal control, and the mathematical modeling of          complex dynamical systems.
+        Currently, I am pursuing my research in the Dynamics and Control lab under the guidance of Dr. Vishnu R. Unni. My ongoing research focuses on two main         categories: system modeling and control. I work on developing computational methods for complex systems, data-driven methods for model order                   reduction, and operator learning to solve partial differential equations arising in fluid flow interactions and related natural phenomena.                     Additionally, I work on developing analytical and data-driven strategies to control dynamical systems. Some of the practical systems I study exhibit           collective behavior, such as multi-soft robotic swimmers, multi-agent drone swarms, and N-vortex problems.
+        Following my graduation, I intend to pursue doctoral studies in applied mathematics, dynamics, and control, with the goal of advancing computational           and theoretical methods for complex physical systems.
+
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
