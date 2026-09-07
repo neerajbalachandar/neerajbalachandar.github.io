@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-serif: "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-paper: var(--paper);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+}
+
+:root {
+  --paper: #ffffff;
+  --panel: #fafafa;
+  --ink: #16181d;
+  --muted: #55606e;
+  --rule: #e3e4e8;
+  --accent: #7b1113;
+}
+
+.dark {
+  --paper: #101215;
+  --panel: #171a1f;
+  --ink: #e7e8ea;
+  --muted: #9aa3b0;
+  --rule: #2a2e35;
+  --accent: #d98a8c;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #f3e4e4;
+  color: #16181d;
+}
