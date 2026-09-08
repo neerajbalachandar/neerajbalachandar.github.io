@@ -10,7 +10,7 @@ export function PublicationPage({ slug }: { slug: string }) {
   if (!p) return <NotFound what="publication" />;
   const proj = p.project ? getProject(p.project) : undefined;
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader
         eyebrow={p.type}
         title={p.title}
@@ -69,7 +69,7 @@ export function CoursePage({ slug }: { slug: string }) {
   const c = getCourse(slug);
   if (!c) return <NotFound what="course" />;
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader
         eyebrow="Course"
         title={c.title}
@@ -117,7 +117,7 @@ export function PostPage({ slug }: { slug: string }) {
   const p = getPost(slug);
   if (!p) return <NotFound what="post" />;
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader
         eyebrow={p.category}
         title={p.title}
@@ -148,7 +148,7 @@ export function NewsPage({ slug }: { slug: string }) {
   const n = getNews(slug);
   if (!n) return <NotFound what="news item" />;
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader eyebrow="News" title={n.title} meta={n.date} backTo="/blog" backLabel="Archive" />
       <section className="mt-8">
         <Prose paragraphs={n.body} />

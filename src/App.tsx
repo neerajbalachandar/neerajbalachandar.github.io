@@ -55,7 +55,7 @@ export default function App() {
     <div className="min-h-screen bg-paper text-ink">
       <Nav />
       {render(path)}
-      <footer className="mx-auto max-w-3xl border-t border-rule px-6 py-6 font-sans text-xs text-muted">
+      <footer className="mx-auto max-w-6xl border-t border-rule px-6 py-6 font-sans text-xs text-muted">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           <span>
             © {new Date().getFullYear()} {profile.name}

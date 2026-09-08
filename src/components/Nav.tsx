@@ -17,7 +17,7 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-rule bg-paper/95 backdrop-blur">
-      <div className="mx-auto flex max-w-3xl flex-wrap items-center gap-x-5 gap-y-2 px-6 py-3">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-6 py-3">
         <Link to="/" className="font-serif text-[0.95rem] tracking-wide">
           {profile.name}
         </Link>

@@ -53,7 +53,7 @@ export default function Home() {
   const past = pastProjects.filter(match);
 
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       {/* Header */}
       <section className="flex flex-col gap-6 py-12 sm:flex-row sm:items-start">
         <Portrait src={profile.photo} fallback={profile.photoFallback} alt={profile.name} />
@@ -91,7 +91,7 @@ export default function Home() {
             <p key={i}>{p}</p>
           ))}
         </div>
-        <div className="mt-8 grid gap-8 sm:grid-cols-2">
+        <div className="mt-8 grid gap-8 lg:grid-cols-2">
           <div>
             <SubHead>Research Interests</SubHead>
             <ul className="space-y-1 text-[1rem]">
@@ -229,7 +229,7 @@ export default function Home() {
           Course summaries with attached notes and code, together with research and course-note
           blog entries.
         </p>
-        <div className="grid gap-8 sm:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <SubHead>Courses</SubHead>
             <ul className="space-y-2">

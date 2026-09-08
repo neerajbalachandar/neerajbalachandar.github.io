@@ -43,7 +43,7 @@ function ProjectCard({ p }: { p: Project }) {
 
 export function ProjectsIndex() {
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader title="Research Projects" meta="Ongoing and past work, grouped by theme." />
       <div className="mt-6 flex flex-wrap gap-1.5">
         {(Object.keys(THEMES) as ThemeKey[]).map((k) => (
@@ -54,7 +54,7 @@ export function ProjectsIndex() {
       </div>
       <section className="mt-10">
         <SubHead>Ongoing</SubHead>
-        <ul className="space-y-6">
+        <ul className="grid gap-6 lg:grid-cols-2">
           {ongoingProjects.map((p) => (
             <ProjectCard key={p.slug} p={p} />
           ))}
@@ -62,7 +62,7 @@ export function ProjectsIndex() {
       </section>
       <section className="mt-10">
         <SubHead>Past</SubHead>
-        <ul className="space-y-6">
+        <ul className="grid gap-6 lg:grid-cols-2">
           {pastProjects.map((p) => (
             <ProjectCard key={p.slug} p={p} />
           ))}
@@ -77,7 +77,7 @@ export function ThemePage({ slug }: { slug: string }) {
   if (!(key in THEMES)) return <NotFound what="theme" />;
   const items = projectsByTheme(key);
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader
         eyebrow="Research theme"
         title={THEMES[key]}
@@ -105,7 +105,7 @@ export function ThemePage({ slug }: { slug: string }) {
 
 export function PublicationsIndex() {
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader title="Research Contributions" meta="Journal, conference and thesis contributions." />
       {[
         { label: "Journal Publications", items: journalPublications },
@@ -135,7 +135,7 @@ export function PublicationsIndex() {
 
 export function CoursesIndex() {
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader
         title="Courses"
         meta="Course summaries with attached notes, code and reports."
@@ -169,7 +169,7 @@ export function CoursesIndex() {
 
 export function BlogIndex() {
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader
         title="Blogs & Notes"
         meta="Research notes, course notes and other writing."

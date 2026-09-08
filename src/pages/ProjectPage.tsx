@@ -10,7 +10,7 @@ export default function ProjectPage({ slug }: { slug: string }) {
   const pubs = publicationsForProject(p.slug);
 
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-24">
+    <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader
         eyebrow={p.status === "ongoing" ? "Ongoing project" : "Past project"}
         title={p.title}
@@ -58,7 +58,7 @@ export default function ProjectPage({ slug }: { slug: string }) {
       <section className="mt-10">
         <SubHead>Figures</SubHead>
         {p.gallery && p.gallery.length > 0 ? (
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 lg:grid-cols-2">
             {p.gallery.map((g) => (
               <figure key={g.src}>
                 <Cover src={g.src} alt={g.caption} seed={g.src} className="h-44 w-full" />

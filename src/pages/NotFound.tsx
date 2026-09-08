@@ -2,7 +2,7 @@ import { Link } from "../lib/router";
 
 export default function NotFound({ what = "page" }: { what?: string }) {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-24">
+    <main className="mx-auto max-w-6xl px-6 py-24">
       <h1 className="text-2xl">This {what} does not exist yet</h1>
       <p className="mt-3 text-[1.05rem] leading-relaxed text-muted">
         The entry you followed has not been written yet, or the address is mistyped. Nothing is
