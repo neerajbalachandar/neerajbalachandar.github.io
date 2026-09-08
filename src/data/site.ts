@@ -8,7 +8,7 @@ export const profile = {
   affiliation: "Indian Institute of Technology Hyderabad",
   email: "neerajbalachandar@gmail.com",
   // Drop your own photo at public/images/portrait.jpg to replace this.
-  photo: "/images/portrait.jpg",
+  photo: "/images/me.jpg",
   photoFallback:
     "https://neerajbalachandar.github.io/author/neeraj-balachandar/avatar_hu4047339585979398385.jpg",
   cv: "/uploads/resume.pdf",
@@ -34,7 +34,7 @@ export const profile = {
 
 export const interests = [
   "Scientific Machine Learning",
-  "Fluid–Structure Interaction",
+  "Fluid-Structure Interaction",
   "Optimal Control and Robotics",
   "Scientific Computing",
   "Complex Systems and Nonlinear Dynamics",
@@ -42,10 +42,10 @@ export const interests = [
 
 export const education = [
   {
-    area: "Dual Degree: B.Tech in Mechanical Engineering — M.Tech in Aerospace Engineering — Minor in Robotics",
+    area: "Dual Degree (Integrated Bachelors and Masters in Technology): B.Tech in Mechanical Engineering | M.Tech in Aerospace Engineering | Minor in Robotics",
     institution: "Indian Institute of Technology (IIT) Hyderabad",
     location: "Hyderabad, India",
-    date: "Nov 2022 – Present",
+    date: "Nov 2022 - Present",
     detail: "CGPA: 3.5 / 4",
   },
 ];
@@ -72,7 +72,7 @@ export const work: Experience[] = [
     position: "Undergraduate Researcher, Dynamics and Control Lab (DysCo)",
     org: "IIT Hyderabad",
     location: "Hyderabad, India",
-    date: "Mar 2024 – Present",
+    date: "Mar 2024 - Present",
     supervisor: { name: "Dr. Vishnu R. Unni" },
     notes: [
       "Conduct research on the modeling and control of complex dynamical systems, spanning fluid–structure interaction, aerial robotics, and soft robotics.",

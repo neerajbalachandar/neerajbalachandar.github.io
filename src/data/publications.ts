@@ -35,6 +35,7 @@ export const publications: Publication[] = [
   },
   {
     slug: "varfiexi-journal",
+    doi: "https://arxiv.org/html/2609.05243v1",
     authors: "Neeraj Balachandar, A. Padmaprabhan, Vishnu R. Unni",
     title:
       "An Aeroelastic Solver Integrating Reformulated-Vortex-Particle and Finite-Element Methods across Non-Conforming Interfaces",
