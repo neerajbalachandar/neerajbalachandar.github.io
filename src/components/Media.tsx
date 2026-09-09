@@ -28,7 +28,7 @@ export function Cover({
   video,
   alt,
   seed,
-  className = "h-24 w-32",
+  className = "h-28 w-40",
 }: {
   src?: string;
   video?: string;
@@ -86,7 +86,7 @@ export function Portrait({
   const source = stage === 0 ? src : stage === 1 ? fallback : "";
   if (stage > 1)
     return (
-      <div className="flex h-28 w-28 items-center justify-center rounded-sm border border-rule bg-panel font-serif text-2xl text-muted">
+      <div className="flex h-72 w-72 items-center justify-center rounded-sm border border-rule bg-panel font-serif text-4xl text-muted">
         NB
       </div>
     );
@@ -95,7 +95,7 @@ export function Portrait({
       src={source}
       alt={alt}
       onError={() => setStage((s) => s + 1)}
-      className="h-28 w-28 shrink-0 rounded-sm border border-rule object-cover"
+      className="h-72 w-72 shrink-0 rounded-sm border border-rule object-cover"
     />
   );
 }

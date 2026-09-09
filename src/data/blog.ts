@@ -7,25 +7,13 @@ export type Post = {
   slug: string;
   title: string;
   date: string;
-  category: "Research notes" | "Course notes" | "Photography" | "General";
+  category: "Research notes" | "Course notes" | "General";
   summary: string;
   body: string[];
   attachments?: { label: string; url: string }[];
 };
 
 export const posts: Post[] = [
-  {
-    slug: "research-notes",
-    title: "Research Notes (Template)",
-    date: "2025",
-    category: "Research notes",
-    summary: "Template blog entry for technical updates and reflections.",
-    body: [
-      "Template blog entry for technical updates and reflections.",
-      "Use this page for short technical write-ups: derivations you found instructive, debugging notes on a solver, or a summary of a paper you read.",
-    ],
-    attachments: [],
-  },
   {
     slug: "course-notes",
     title: "Course Notes (Template)",
@@ -37,18 +25,6 @@ export const posts: Post[] = [
       "Course-specific material now lives in the Courses section; use this page for cross-cutting notes that do not belong to a single course.",
     ],
     attachments: [{ label: "Notes (PDF)", url: "/uploads/notes/course-notes.pdf" }],
-  },
-  {
-    slug: "photography",
-    title: "Photography (Template)",
-    date: "2025",
-    category: "Photography",
-    summary: "Showcase photographs you capture and write a short story behind each one.",
-    body: [
-      "Showcase photographs you capture and write a short story behind each one.",
-      "Add image files to public/images/photography/ and reference them here.",
-    ],
-    attachments: [],
   },
 ];
 

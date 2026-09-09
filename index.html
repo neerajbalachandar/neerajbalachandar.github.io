@@ -52,7 +52,7 @@
     h1, h2, h3, .section-title {
         font-size: 1.6em !important;
         font-weight: 700 !important;
-        color: #8b0000 !important; /* Dark Red Shade */
+        color: #8b0000d4 !important; /* Dark Red Shade */
         margin-top: 1.5em !important;
         border-bottom: 2px solid #f0e0e0 !important;
         padding-bottom: 0.3em !important;
@@ -62,7 +62,7 @@
     #education h2, #research-interest h2, 
     .education .section-title, .research-interest .section-title,
     section.education h2, section.research-interest h2 {
-        color: #ab0505 !important; 
+        color: #ab0505d1 !important; 
         text-transform: uppercase !important;
         letter-spacing: 0.05em !important;
         border-bottom: 3px solid #8b0000 !important;
@@ -91,7 +91,7 @@
     #publications li::before, .publications li::before {
         content: counter(fancy-counter) ".";
         font-weight: 800 !important;
-        color: #8b0000 !important;
+        color: #8b0000ce !important;
         font-size: 1.5em !important;
         margin-right: 0.8em !important;
         min-width: 40px !important;
@@ -119,6 +119,79 @@
         color: white !important; 
         text-decoration: none !important; 
     }
+    
+
+    /* --- UPDATES: Bigger Profile & Project Photos --- */
+    img.profile-photo, img.author-avatar, img.photo, .profile img, header img {
+        width: 280px !important;
+        height: 280px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+    }
+    .project img, .projects img, .card img {
+        width: 150px !important;
+        height: 150px !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
+    }
+
+    /* --- UPDATES: Engaging Recent Activity --- */
+    #recent-activity, .recent-activity {
+        background-color: #fdf5f5 !important;
+        border-left: 5px solid #8b0000 !important;
+        padding: 15px 20px !important;
+        border-radius: 4px !important;
+        margin-bottom: 2em !important;
+    }
+    #recent-activity li, .recent-activity li {
+        font-weight: 600 !important;
+        color: #2c3e50 !important;
+        margin-bottom: 10px !important;
+    }
+    .arxiv-badge {
+        display: inline-block !important;
+        background: #b31b1b !important;
+        color: white !important;
+        padding: 2px 8px !important;
+        border-radius: 4px !important;
+        font-size: 0.85em !important;
+        margin-right: 8px !important;
+        text-decoration: none !important;
+    }
+
+    /* --- UPDATES: Blog & Course Note Blocks --- */
+    .custom-blocks {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 15px !important;
+        margin-top: 20px !important;
+    }
+    .block-item {
+        border: 1px solid #ddd !important;
+        padding: 20px !important;
+        border-radius: 8px !important;
+        width: 200px !important;
+        text-align: center !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+        background: white !important;
+    }
+    .block-item:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+        border-color: #8b0000 !important;
+    }
+    .block-tag {
+        display: inline-block !important;
+        font-size: 0.75em !important;
+        margin-top: 8px !important;
+        padding: 3px 6px !important;
+        border-radius: 4px !important;
+        color: white !important;
+    }
+    .tag-course { background: #6c757d !important; }
+    .tag-blog { background: #8b0000 !important; }
     
 </style>
 </head>
@@ -234,6 +307,47 @@
 
             if (linksDiv.children.length > 0) {
                 titleLink.insertAdjacentElement("afterend", linksDiv);
+            }
+        });
+    });
+    </script>
+    
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // --- 1. REMOVE SECTIONS ---
+        document.querySelectorAll('#photography, .photography, #extracurricular, .extracurricular, #skills, .technical-skills, #coursework, .coursework').forEach(el => el.remove());
+
+        // --- 2. EXPERIENCE -> TITLES ONLY, MOVE POINTS TO PAST PROJECTS ---
+        let expSection = document.querySelector('#experience, .experience');
+        if (expSection) {
+            let pastProjects = document.createElement('div');
+            pastProjects.id = 'past-projects';
+            let h2 = document.createElement('h2');
+            h2.innerText = 'Past Projects';
+            h2.style.color = '#8b0000';
+            h2.style.borderBottom = '2px solid #f0e0e0';
+            pastProjects.appendChild(h2);
+
+            // Find all list items in experience, move them to past projects
+            expSection.querySelectorAll('ul').forEach(ul => {
+                pastProjects.appendChild(ul);
+            });
+
+            // Insert Past Projects after Experience
+            expSection.parentNode.insertBefore(pastProjects, expSection.nextSibling);
+        }
+
+        // --- 3. (blog block removed) ---
+        // --- 4. MAKE RECENT ACTIVITY ENGAGING (ArXiv Badges) ---
+        let recentLis = document.querySelectorAll('#recent-activity li, .recent-activity li');
+        recentLis.forEach(li => {
+            if(li.innerText.toLowerCase().includes('arxiv')) {
+                let badge = document.createElement('a');
+                badge.className = 'arxiv-badge';
+                badge.href = '#';
+                badge.innerText = 'arXiv';
+                li.prepend(badge);
             }
         });
     });

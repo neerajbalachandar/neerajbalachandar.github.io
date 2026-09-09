@@ -15,8 +15,8 @@ export default function ProjectPage({ slug }: { slug: string }) {
         eyebrow={p.status === "ongoing" ? "Ongoing project" : "Past project"}
         title={p.title}
         meta={p.period}
-        backTo="/projects"
-        backLabel="All projects"
+        backTo="/"
+        backLabel="Home"
       />
 
       <div className="mt-8 flex flex-col gap-6 sm:flex-row">
@@ -82,10 +82,15 @@ export default function ProjectPage({ slug }: { slug: string }) {
           <ul className="space-y-2">
             {pubs.map((pub) => (
               <li key={pub.slug} className="text-[1.02rem] leading-snug">
-                <A href={`/publication/${pub.slug}`}>{pub.title}</A>
+                <A href={pub.doi || pub.pdf || pub.github || `/publication/${pub.slug}`}>{pub.title}</A>
                 <span className="block text-[0.93rem] text-muted">
                   {pub.venue}, {pub.year}
                 </span>
+                {pub.project && (
+                  <div className="mt-1">
+                    <A href={`/project/${pub.project}`}>Project →</A>
+                  </div>
+                )}
               </li>
             ))}
           </ul>
@@ -101,6 +106,20 @@ export default function ProjectPage({ slug }: { slug: string }) {
                 <A href={l.url}>{l.label}</A>
               </li>
             ))}
+          </ul>
+        </section>
+      )}
+      {pubs.length > 0 && (
+        <section className="mt-10">
+          <SubHead>Related GitHub</SubHead>
+          <ul className="space-y-1 text-[1.02rem]">
+            {Array.from(new Set(pubs.map((x) => x.github).filter(Boolean)))
+              .map((g) => g as string)
+              .map((g) => (
+                <li key={g}>
+                  <A href={g}>GitHub</A>
+                </li>
+              ))}
           </ul>
         </section>
       )}

@@ -21,8 +21,8 @@ export function PublicationPage({ slug }: { slug: string }) {
             <span className="italic">{p.venue}</span>
           </>
         }
-        backTo="/publications"
-        backLabel="All publications"
+        backTo="/"
+        backLabel="Home"
       />
       <section className="mt-8">
         <SubHead>Abstract</SubHead>
@@ -70,13 +70,7 @@ export function CoursePage({ slug }: { slug: string }) {
   if (!c) return <NotFound what="course" />;
   return (
     <main className="mx-auto max-w-6xl px-6 pb-24">
-      <PageHeader
-        eyebrow="Course"
-        title={c.title}
-        meta={c.institution}
-        backTo="/courses"
-        backLabel="All courses"
-      />
+      <PageHeader eyebrow="Course" title={c.title} meta={c.institution} backTo="/" backLabel="Home" />
       <section className="mt-8">
         <SubHead>What the course covered</SubHead>
         <Prose paragraphs={[c.summary]} />
@@ -118,13 +112,7 @@ export function PostPage({ slug }: { slug: string }) {
   if (!p) return <NotFound what="post" />;
   return (
     <main className="mx-auto max-w-6xl px-6 pb-24">
-      <PageHeader
-        eyebrow={p.category}
-        title={p.title}
-        meta={p.date}
-        backTo="/blog"
-        backLabel="All blogs & notes"
-      />
+      <PageHeader eyebrow={p.category} title={p.title} meta={p.date} backTo="/" backLabel="Home" />
       <section className="mt-8">
         <Prose paragraphs={p.body} />
       </section>
@@ -149,7 +137,7 @@ export function NewsPage({ slug }: { slug: string }) {
   if (!n) return <NotFound what="news item" />;
   return (
     <main className="mx-auto max-w-6xl px-6 pb-24">
-      <PageHeader eyebrow="News" title={n.title} meta={n.date} backTo="/blog" backLabel="Archive" />
+      <PageHeader eyebrow="News" title={n.title} meta={n.date} backTo="/" backLabel="Home" />
       <section className="mt-8">
         <Prose paragraphs={n.body} />
       </section>

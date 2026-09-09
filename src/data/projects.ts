@@ -8,7 +8,7 @@
 
 export const THEMES = {
   sciml: "Scientific Machine Learning",
-  fsi: "Fluid–Structure Interaction",
+  fsi: "Fluid-Structure Interaction",
   control: "Control & Optimisation",
   robotics: "Robotics & Autonomy",
   computing: "Scientific Computing",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     period: "Aug 2026 – Present",
     advisors: [{ name: "Dr. Vishnu R. Unni" }, { name: "Dr. Vishal Sawant" }],
     themes: ["robotics", "control", "sciml"],
-    cover: "/images/projects/soft-dynamical-systems.jpg",
+    cover: "/images/projects/sorogym.png",
     highlights: [
       "Developing a soft-robot simulation and action-state RL-Gymnasium for a generalized class of soft robots to learn locomotion.",
       "Investigating morphology-dependent controllability, relating changes in the robot's dynamics and actuation to its achievable locomotion behaviors.",
@@ -74,7 +74,7 @@ export const projects: Project[] = [
       { name: "Dr. Sumohana S. Channappayya" },
     ],
     themes: ["sciml", "fsi"],
-    cover: "/images/projects/neural-operator.jpg",
+    cover: "/images/projects/neural-operator.png",
     highlights: [
       "Formulated and implemented an operator learning framework, modifying the existing Geometry-Informed Neural Operator to perform multi-task prediction in a shared Fourier latent space.",
       "Validated the architecture by learning two coupled tasks from a common latent space: vortex-particle evolution in the Lagrangian frame and Eulerian velocity-field reconstruction, exploiting their shared underlying Poisson PDE dynamics through an operator-theoretic formulation.",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
       { name: "Dr. Prakhar Gupta" },
     ],
     themes: ["fsi", "computing"],
-    cover: "/images/projects/varflexi.jpg",
+    cover: "/images/projects/varflexi.png",
     highlights: [
       "Developed the framework VarFlExI, a variable-fidelity partitioned solver that uses a meshless scheme to solve the Navier–Stokes equations with a reformulated vortex particle method, coupled with FEniCS to solve dynamic aeroelasticity problems using Generalized-α.",
       "The solver features strong work-conservation techniques that exploit the Common Refinement Method (CRM) or Wendland Kernel-based interpolation (RBF) to transfer aerodynamic force and structural geometry across non-conforming and multi-representative discretizations through a common interface.",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     period: "May 2025 – Present",
     advisors: [{ name: "Dr. Vishnu R. Unni" }],
     themes: ["control", "robotics"],
-    cover: "/images/projects/docking.jpg",
+    cover: "/images/projects/docking.png",
     highlights: [
       "Developed a receding-horizon nonlinear model predictive control framework for autonomous drone-to-drone docking, formulating docking as a finite-horizon constrained optimal-control problem and solving it through Sequential Convex Programming (SCP).",
       "Formulated a reduced-order nonlinear multirotor model augmented with wind-disturbance states, and iteratively linearized the dynamics within a trust-region SCP framework with virtual control to obtain tractable convex subproblems.",
@@ -144,7 +144,7 @@ export const projects: Project[] = [
     period: "Jan 2026 – Present",
     advisors: [{ name: "Dr. Vishnu R. Unni" }],
     themes: ["robotics", "control", "sciml"],
-    cover: "/images/projects/learn-to-fly.jpg",
+    cover: "/images/projects/learn-to-fly.png",
     highlights: [
       "Developed a mechanically constrained aerial-robot platform for system identification and control, using reduced translational and rotational degrees of freedom to obtain direct measurement of generalized coordinates and net wrench on the multi-rotor.",
       "Formulated the coupled aerial-robot dynamics through an Euler–Lagrange framework, deriving the mass matrix, Coriolis terms, potential-energy terms, and generalized forces for the constrained 3/4/5-DOF configurations.",
@@ -168,10 +168,30 @@ export const projects: Project[] = [
     period: "Mar 2026",
     advisors: [{ name: "Dr. Sumohana S. Channappayya" }],
     themes: ["control"],
+    cover: "/images/projects/cbf.png",
     highlights: [
       "Investigated Control Barrier Function (CBF) synthesis under actuator constraints, comparing classical CBFs, Input-Constrained CBFs (ICCBFs), and Sum-of-Squares (SOS)-based formulations for safety-critical obstacle avoidance.",
       "Implemented and analyzed polynomial barrier-function synthesis, including joint barrier–controller parameterization; identified the resulting bilinear matrix inequality (BMI) and demonstrated how actuator saturation can invalidate safety guarantees obtained without explicit input constraints.",
       "Developed a convex SOS/semidefinite-programming formulation for input-constrained CBF synthesis using lifted polynomial representations, SOS multipliers, and Schur-complement-based input constraints; implemented and evaluated formulations using YALMIP, MOSEK, and Clarabel.",
+    ],
+    gallery: [],
+  },
+  {
+    slug: "swarm-rescue",
+    title: "Drone Swarm — Swarm Rescue Challenge",
+    short: "Multi-UAV exploration and rescue framework (Swarm Rescue Challenge)",
+    summary:
+      "Developed a multi-UAV exploration and rescue framework evaluated at the Swarm Rescue Challenge hosted by CIEDS – Ecole Polytechnique de Paris.",
+    status: "past",
+    period: "Nov 2024 – Mar 2025",
+    advisors: [{ name: "Dr. David Filliat" }],
+    themes: ["robotics", "control"],
+    cover: "/images/projects/swarm-rescue.png",
+    highlights: [
+      "Developed a Python-based multi-UAV exploration and rescue framework for unknown environments under obstacle, communication, and resource constraints.",
+      "Designed decentralized swarm navigation using Artificial Potential Fields for exploration and RRT for return-to-base transport, with nearby drones maintaining a coordinated polygon formation around a designated leader.",
+      "Evaluated swarm performance across multiple simulated environments and compared clustering-based exploration strategies using DBSCAN and K-means; achieved strong technical performance and presentation results.",
+      "Presented the system and challenge results in person at Ecole Polytechnique de Paris; ranked among top-performing teams.",
     ],
     gallery: [],
   },
@@ -185,28 +205,29 @@ export const projects: Project[] = [
     period: "Nov 2025",
     advisors: [{ name: "Dr. Vishnu R. Unni" }],
     themes: ["control", "robotics"],
+    cover: "/images/projects/neuro-fuzzy.png",
     highlights: [
       "Developed an adaptive neuro-fuzzy PID controller for nonlinear trajectory tracking of a 2-DOF robotic manipulator; used online gradient-based learning to adapt PID gains and fuzzy membership parameters from joint tracking error and its rate of change.",
       "Evaluated tracking and gain adaptation under parabolic, high-slope sinusoidal, and multi-frequency trajectories, demonstrating better performance over fixed-gain PID.",
     ],
     gallery: [],
   },
-  {
-    slug: "parallel-svd",
-    title: "Parallelization of SVD Algorithm",
-    short: "Jacobi SVD parallelized in C with OpenMP",
-    summary:
-      "A Jacobi-based SVD/eigendecomposition algorithm implemented in C with OpenMP, parallelizing matrix operations and off-diagonal pivot search for multicore execution.",
-    status: "past",
-    period: "Feb 2025",
-    advisors: [{ name: "Dr. Niranjan Ghaisas" }],
-    themes: ["computing"],
-    highlights: [
-      "Implemented a Jacobi-based SVD/eigendecomposition algorithm in C with OpenMP, parallelizing matrix operations and off-diagonal pivot search for multicore execution.",
-      "Benchmarked serial vs. parallel performance and strong/weak scaling across increasing matrix sizes.",
-    ],
-    gallery: [],
-  },
+  // {
+  //   slug: "parallel-svd",
+  //   title: "Parallelization of SVD Algorithm",
+  //   short: "Jacobi SVD parallelized in C with OpenMP",
+  //   summary:
+  //     "A Jacobi-based SVD/eigendecomposition algorithm implemented in C with OpenMP, parallelizing matrix operations and off-diagonal pivot search for multicore execution.",
+  //   status: "past",
+  //   period: "Feb 2025",
+  //   advisors: [{ name: "Dr. Niranjan Ghaisas" }],
+  //   themes: ["computing"],
+  //   highlights: [
+  //     "Implemented a Jacobi-based SVD/eigendecomposition algorithm in C with OpenMP, parallelizing matrix operations and off-diagonal pivot search for multicore execution.",
+  //     "Benchmarked serial vs. parallel performance and strong/weak scaling across increasing matrix sizes.",
+  //   ],
+  //   gallery: [],
+  // },
 ];
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);

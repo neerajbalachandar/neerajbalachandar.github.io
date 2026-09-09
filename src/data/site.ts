@@ -16,7 +16,7 @@ export const profile = {
     "Indian Institute of Technology Hyderabad, Kandi, Sangareddy 502284, Telangana, India.",
   bio: [
     "I am a Dual Degree student at the Indian Institute of Technology Hyderabad, pursuing a B.Tech in Mechanical Engineering and an M.Tech in Aerospace Engineering with a Minor in Robotics.",
-    "My primary research objectives are modeling ",
+    "My primary research objectives are the modeling and control of complex dynamical systems, like fluid-structure interaction, soft and aerial robotics.",
   ],
   links: [
     { label: "Email", url: "mailto:neerajbalachandar@gmail.com" },
@@ -32,11 +32,12 @@ export const profile = {
   ],
 };
 
+export const courseNotesPassword = "changeme";
+
 export const interests = [
-  "Scientific Machine Learning",
+  "Scientific Computing and AI4Science",
   "Fluid-Structure Interaction",
   "Optimal Control and Robotics",
-  "Scientific Computing",
   "Complex Systems and Nonlinear Dynamics",
 ];
 

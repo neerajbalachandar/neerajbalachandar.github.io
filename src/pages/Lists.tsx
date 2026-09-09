@@ -16,6 +16,7 @@ import {
 } from "../data/publications";
 import { courses } from "../data/courses";
 import { news, posts } from "../data/blog";
+import { courseNotesPassword } from "../data/site";
 import NotFound from "./NotFound";
 
 function ProjectCard({ p }: { p: Project }) {
@@ -134,6 +135,16 @@ export function PublicationsIndex() {
 }
 
 export function CoursesIndex() {
+  const openProtected = (e: any, url: string) => {
+    e.preventDefault();
+    const pw = window.prompt("Enter password to access course notes:");
+    if (pw === courseNotesPassword) {
+      window.open(url, "_blank");
+    } else if (pw !== null) {
+      window.alert("Incorrect password");
+    }
+  };
+
   return (
     <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader
@@ -141,10 +152,16 @@ export function CoursesIndex() {
         meta="Course summaries with attached notes, code and reports."
       />
       <ul className="mt-8 space-y-6">
-        {courses.map((c) => (
+            {courses.map((c) => (
           <li key={c.slug}>
             <h3 className="text-[1.05rem] leading-snug">
-              <A href={`/course/${c.slug}`}>{c.title}</A>
+              <a
+                href={`/course/${c.slug}`}
+                onClick={(e) => openProtected(e, `/course/${c.slug}`)}
+                className="border-b border-rule pb-px transition-colors hover:border-accent hover:text-accent"
+              >
+                {c.title}
+              </a>
               <span className="ml-2 font-sans text-xs text-muted">
                 {c.term} · {c.institution}
               </span>
@@ -168,39 +185,51 @@ export function CoursesIndex() {
 }
 
 export function BlogIndex() {
+  const openProtected = (e: any, url: string) => {
+    e.preventDefault();
+    const pw = window.prompt("Enter password to access course notes:");
+    if (pw === courseNotesPassword) {
+      window.location.href = url;
+    } else if (pw !== null) {
+      window.alert("Incorrect password");
+    }
+  };
+
   return (
     <main className="mx-auto max-w-6xl px-6 pb-24">
-      <PageHeader
-        title="Blogs & Notes"
-        meta="Research notes, course notes and other writing."
-      />
+      <PageHeader title="Blogs" meta="Small blogs and course notes." />
       <ul className="mt-8 space-y-5">
-        {posts.map((b) => (
-          <li key={b.slug}>
-            <h3 className="text-[1.03rem] leading-snug">
-              <A href={`/blog/${b.slug}`}>{b.title}</A>
-            </h3>
-            <p className="mt-1 text-[0.95rem] text-muted">{b.summary}</p>
-            <p className="mt-1 font-sans text-[0.7rem] uppercase tracking-wide text-muted">
-              {b.category} · {b.date}
-            </p>
-          </li>
-        ))}
+        {posts
+          .filter((b) => b.category === "Course notes")
+          .map((b) => {
+            const att = b.attachments && b.attachments[0];
+            const isExternal = att && /https?:\/\//.test(att.url);
+            return (
+              <li key={b.slug}>
+                <h3 className="text-[1.03rem] leading-snug">
+                  {isExternal ? (
+                    <a
+                      href={att!.url}
+                      onClick={(e) => openProtected(e, att!.url)}
+                      className="border-b border-rule pb-px transition-colors hover:border-accent hover:text-accent"
+                    >
+                      {b.title}
+                    </a>
+                  ) : (
+                    <A href={`/blog/${b.slug}`}>{b.title}</A>
+                  )}
+                </h3>
+                <p className="mt-1 text-[0.95rem] text-muted">{b.summary}</p>
+                <p className="mt-1 font-sans text-[0.7rem] uppercase tracking-wide text-muted">
+                  {b.category} · {b.date}
+                </p>
+              </li>
+            );
+          })}
       </ul>
 
       <section className="mt-12">
-        <SubHead>Course-specific notes</SubHead>
-        <ul className="space-y-1 text-[1.02rem]">
-          {courses.map((c) => (
-            <li key={c.slug}>
-              <A href={`/course/${c.slug}`}>{c.title}</A>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mt-12">
-        <SubHead>News archive</SubHead>
+        <SubHead>Archive</SubHead>
         <ul className="space-y-1 text-[1.02rem]">
           {news.map((n) => (
             <li key={n.slug}>

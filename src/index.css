@@ -1,17 +1,19 @@
+
 @import "tailwindcss";
+
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --font-serif: "EB Garamond", Georgia, "Times New Roman", serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-paper: var(--paper);
-  --color-panel: var(--panel);
-  --color-ink: var(--ink);
-  --color-muted: var(--muted);
-  --color-rule: var(--rule);
-  --color-accent: var(--accent);
-}
+  --font-serif: "EB Garamond", Georgia, "Times New Roman", serif;  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;   
+  --font-nunito: "Nunito", "Inter", sans-serif;   /* new */   
+  --color-paper: var(--paper);   
+  --color-panel: var(--panel);   
+  --color-ink: var(--ink);   
+  --color-muted: var(--muted);   
+  --color-rule: var(--rule);   
+  --color-accent: var(--accent); }
 
 :root {
   --paper: #ffffff;
@@ -19,7 +21,7 @@
   --ink: #16181d;
   --muted: #55606e;
   --rule: #e3e4e8;
-  --accent: #7b1113;
+  --accent: #b72124;
 }
 
 .dark {
@@ -36,15 +38,14 @@ html {
   scroll-padding-top: 5.5rem;
 }
 
-body {
-  background-color: var(--paper);
-  color: var(--ink);
-  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
+body { 
+  background-color: var(--paper); 
+  color: var(--ink); 
+  font-family: var(--font-nunito);  /* changed from EB Garamond */ 
+  -webkit-font-smoothing: antialiased; 
+  text-rendering: optimizeLegibility; }
 
 ::selection {
   background: #f3e4e4;
-  color: #16181d;
+  color: #16181dc6;
 }

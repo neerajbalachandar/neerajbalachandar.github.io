@@ -2,16 +2,7 @@ import { useState } from "react";
 import { A, Chip, Section, SubHead } from "../components/UI";
 import { Cover, Portrait } from "../components/Media";
 import { Link } from "../lib/router";
-import {
-  awards,
-  coursework,
-  education,
-  extracurriculars,
-  interests,
-  profile,
-  skills,
-  work,
-} from "../data/site";
+import { awards, education, interests, profile, work, courseNotesPassword } from "../data/site";
 import { publications } from "../data/publications";
 import {
   ongoingProjects,
@@ -20,7 +11,6 @@ import {
   type Project,
   type ThemeKey,
 } from "../data/projects";
-import { courses } from "../data/courses";
 import { news, posts } from "../data/blog";
 
 function ProjectRow({ p }: { p: Project }) {
@@ -52,6 +42,17 @@ export default function Home() {
   const ongoing = ongoingProjects.filter(match);
   const past = pastProjects.filter(match);
 
+  const openProtected = (e: any, url: string, slug?: string) => {
+    e.preventDefault();
+    const pw = window.prompt("Enter password to access course notes:");
+    if (pw === courseNotesPassword) {
+      if (url) window.open(url, "_blank");
+      else if (slug) window.location.href = `/blog/${slug}`;
+    } else if (pw !== null) {
+      window.alert("Incorrect password");
+    }
+  };
+
   return (
     <main className="mx-auto max-w-6xl px-6 pb-24">
       {/* Header */}
@@ -81,6 +82,14 @@ export default function Home() {
               Curriculum Vitae (PDF)
             </a>
           </p>
+
+          {/* Education placed beside portrait to fill space */}
+          {education && education[0] && (
+            <div className="mt-4 text-[0.95rem] text-muted">
+              <div className="font-semibold">{education[0].institution}</div>
+              <div className="text-sm">{education[0].area}</div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -101,40 +110,42 @@ export default function Home() {
             </ul>
           </div>
           <div>
-            <SubHead>Education</SubHead>
+            <SubHead>
+              <Link to="/blog" className="hover:text-accent">
+                Blogs
+              </Link>
+            </SubHead>
             <ul className="space-y-2">
-              {education.map((e) => (
-                <li key={e.area}>
-                  <div className="text-[1rem] leading-snug">{e.area}</div>
-                  <div className="text-[0.95rem] text-muted">
-                    {e.institution} · {e.location}
-                  </div>
-                  <div className="font-sans text-xs text-muted">
-                    {e.date} · {e.detail}
-                  </div>
-                </li>
-              ))}
+              {posts
+                .filter((b) => b.category === "Course notes")
+                .map((b) => (
+                  <li key={b.slug} className="text-[1rem] leading-snug">
+                      <a
+                        href={`/blog`}
+                      onClick={(e) => {
+                        // if post has attachment url, open protected to attachment
+                        const att = b.attachments && b.attachments[0];
+                        if (att && /drive\.google\.com|https?:\/\//.test(att.url)) {
+                          openProtected(e, att.url, b.slug);
+                        }
+                      }}
+                      className="border-b border-rule pb-px transition-colors hover:border-accent hover:text-accent"
+                    >
+                      {b.title}
+                    </a>
+                  </li>
+                ))}
             </ul>
           </div>
-        </div>
-
-        <div className="mt-8">
-          <SubHead>Relevant Coursework</SubHead>
-          <ul className="space-y-1.5">
-            {coursework.map((c) => (
-              <li key={c.group} className="text-[1rem] leading-snug">
-                <span className="font-semibold">{c.group}:</span>{" "}
-                <span className="text-muted">{c.items.join(", ")}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </Section>
 
       {/* Publications */}
+
+      {/* Recent Publications (show two) */}
       <Section
         id="publications"
-        title="Publications & Preprints"
+        title="Recent Publications"
         action={
           <Link to="/publications" className="hover:text-accent">
             All publications →
@@ -142,20 +153,39 @@ export default function Home() {
         }
       >
         <ol className="space-y-5">
-          {publications.map((p, idx) => (
-            <li key={p.slug} className="grid grid-cols-[1.75rem_1fr] gap-x-2">
-              <span className="pt-1 font-sans text-xs text-muted">
-                [{publications.length - idx}]
-              </span>
-              <div>
-                <p className="text-[1.03rem] leading-snug">
-                  <A href={`/publication/${p.slug}`}>{p.title}</A>
-                </p>
-                <p className="mt-1 text-[0.95rem] text-muted">{p.authors}</p>
-                <p className="text-[0.9rem] italic text-muted">{p.venue}</p>
-              </div>
-            </li>
-          ))}
+          {[
+            "varfiexi-journal", // Aeroelastic solver
+            "docking-aim", // NMPC-SCP docking
+          ]
+            .map((slug) => publications.find((p) => p.slug === slug))
+            .filter(Boolean)
+            .map((p, idx) => {
+              const ext = p!.doi || p!.pdf || p!.github;
+              const href = ext ? ext : p!.project ? `/project/${p!.project}` : `/publication/${p!.slug}`;
+              const isExternal = !!ext && /https?:\/\//.test(ext as string);
+              return (
+                <li key={p!.slug} className="grid grid-cols-[1fr] gap-x-2">
+                  <div>
+                    <p className="text-[1.03rem] leading-snug">
+                      {isExternal ? (
+                        <a href={href} target="_blank" rel="noreferrer" className="border-b border-rule pb-px hover:text-accent">
+                          {p!.title}
+                        </a>
+                      ) : (
+                        <A href={href}>{p!.title}</A>
+                      )}
+                    </p>
+                    <p className="mt-1 text-[0.95rem] text-muted">{p!.authors}</p>
+                    <p className="text-[0.9rem] italic text-muted">{p!.venue}</p>
+                    {p!.project && (
+                      <div className="mt-1">
+                        <A href={`/project/${p!.project}`}>Project →</A>
+                      </div>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
         </ol>
       </Section>
 
@@ -209,132 +239,76 @@ export default function Home() {
         )}
       </Section>
 
-      {/* Courses & Blogs */}
-      <Section
-        id="courses"
-        title="Courses & Blogs"
-        action={
-          <>
-            <Link to="/courses" className="hover:text-accent">
-              All courses →
-            </Link>
-            <span className="px-2 text-rule">|</span>
-            <Link to="/blog" className="hover:text-accent">
-              All blogs →
-            </Link>
-          </>
-        }
-      >
-        <p className="mb-5 text-[1.02rem] leading-relaxed text-muted">
-          Course summaries with attached notes and code, together with research and course-note
-          blog entries.
-        </p>
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div>
-            <SubHead>Courses</SubHead>
-            <ul className="space-y-2">
-              {courses.slice(0, 5).map((c) => (
-                <li key={c.slug} className="text-[1rem] leading-snug">
-                  <A href={`/course/${c.slug}`}>{c.title}</A>
-                  <span className="ml-2 font-sans text-xs text-muted">{c.term}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <SubHead>Blog & Notes</SubHead>
-            <ul className="space-y-2">
-              {posts.map((b) => (
-                <li key={b.slug} className="text-[1rem] leading-snug">
-                  <A href={`/blog/${b.slug}`}>{b.title}</A>
-                  <span className="ml-2 font-sans text-xs text-muted">{b.category}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </Section>
+      {/* Blogs moved into About section (removed duplicate here) */}
 
-      {/* Experience */}
-      <Section id="experience" title="Experience">
-        <ul className="space-y-6">
-          {work.map((w) => (
-            <li key={w.position + w.org} className="grid gap-x-6 sm:grid-cols-[9.5rem_1fr]">
-              <div className="font-sans text-xs text-muted sm:pt-1">
-                {w.date}
-                <div className="mt-0.5">{w.location}</div>
-              </div>
-              <div>
-                <div className="text-[1.03rem] leading-snug">{w.position}</div>
-                <div className="text-[0.95rem] text-muted">{w.org}</div>
-                {w.supervisor && (
-                  <div className="font-sans text-xs text-muted">
-                    Supervised by {w.supervisor.name}
-                  </div>
-                )}
-                {w.notes.length > 0 && (
-                  <ul className="mt-2 list-disc space-y-1 pl-5 text-[0.97rem] leading-relaxed text-muted">
-                    {w.notes.map((n) => (
-                      <li key={n}>{n}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-10">
-          <SubHead>Technical Skills</SubHead>
-        </div>
-        <ul className="space-y-2">
-          {skills.map((s) => (
-            <li key={s.group} className="grid gap-x-6 sm:grid-cols-[9.5rem_1fr]">
-              <div className="font-sans text-xs text-muted sm:pt-1">{s.group}</div>
-              <div className="text-[1rem]">{s.items.join(" · ")}</div>
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-10">
-          <SubHead>Awards & Honours</SubHead>
-        </div>
-        <ul className="space-y-3">
-          {awards.map((a) => (
-            <li key={a.title}>
-              <div className="text-[1.03rem] leading-snug">
-                {a.url ? <A href={a.url}>{a.title}</A> : a.title}
-              </div>
-              <div className="text-[0.95rem] text-muted">{a.awarder}</div>
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-10">
-          <SubHead>Extracurricular Activities</SubHead>
-        </div>
-        <ul className="list-disc space-y-1 pl-5 text-[1rem] leading-relaxed">
-          {extracurriculars.map((e) => (
-            <li key={e}>{e}</li>
-          ))}
-        </ul>
-      </Section>
-
-      {/* News */}
+      {/* Recent Activity (moved up to be above Experience) */}
       <Section id="news" title="Recent Activity">
         <ul className="space-y-4">
-          {news.map((n) => (
-            <li key={n.slug} className="grid gap-x-6 sm:grid-cols-[9.5rem_1fr]">
-              <div className="font-sans text-xs text-muted sm:pt-1">{n.date}</div>
-              <div>
-                <div className="text-[1.03rem] leading-snug">
-                  <A href={`/news/${n.slug}`}>{n.title}</A>
+          {news.map((n) => {
+            const isArxiv = /arxiv/i.test((n.title + n.summary).toLowerCase());
+            return (
+              <li
+                key={n.slug}
+                className="grid gap-x-6 sm:grid-cols-[9.5rem_1fr] border-l-2 pl-4"
+              >
+                <div className="font-sans text-xs text-muted sm:pt-1">{n.date}</div>
+                <div>
+                  <div className="flex items-center gap-3">
+                    <div className="text-[1.03rem] leading-snug">
+                      <A href={`/news/${n.slug}`}>{n.title}</A>
+                    </div>
+                    {isArxiv && (
+                      <span className="rounded-full bg-accent/10 px-2 py-0.5 text-xs text-accent">
+                        arXiv
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-[0.95rem] text-muted">{n.summary}</p>
                 </div>
-                <p className="text-[0.95rem] text-muted">{n.summary}</p>
-              </div>
-            </li>
-          ))}
+              </li>
+            );
+          })}
         </ul>
+      </Section>
+
+      {/* Experience + Awards side-by-side */}
+      <Section id="experience" title="Experience">
+        <div className="grid gap-8 lg:grid-cols-2 items-start">
+          <div>
+            <ul className="space-y-6">
+              {work.map((w) => (
+                <li key={w.position + w.org} className="grid gap-x-6 sm:grid-cols-[9.5rem_1fr]">
+                  <div className="font-sans text-xs text-muted">
+                    {w.date}
+                    <div className="mt-0.5">{w.location}</div>
+                  </div>
+                  <div>
+                    <div className="text-[1.03rem] leading-snug">{w.position}</div>
+                    <div className="text-[0.95rem] text-muted">{w.org}</div>
+                    {w.supervisor && (
+                      <div className="font-sans text-xs text-muted">
+                        Supervised by {w.supervisor.name}
+                      </div>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="self-start">
+            <SubHead>Awards</SubHead>
+            <ul className="space-y-3">
+              {awards.map((a) => (
+                <li key={a.title}>
+                  <div className="text-[1.03rem] leading-snug">
+                    {a.url ? <A href={a.url}>{a.title}</A> : a.title}
+                  </div>
+                  <div className="text-[0.95rem] text-muted">{a.awarder}</div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </Section>
 
       {/* Contact */}
