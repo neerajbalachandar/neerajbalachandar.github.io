@@ -4,7 +4,7 @@
 
 export const profile = {
   name: "Neeraj Balachandar",
-  role: "Dual Degree Student — B.Tech (Mechanical) + M.Tech (Aerospace), Minor in Robotics",
+  role: "Dual Degree Student",
   affiliation: "Indian Institute of Technology Hyderabad",
   email: "neerajbalachandar@gmail.com",
   // Drop your own photo at public/images/portrait.jpg to replace this.
@@ -16,7 +16,7 @@ export const profile = {
     "Indian Institute of Technology Hyderabad, Kandi, Sangareddy 502284, Telangana, India.",
   bio: [
     "I am a Dual Degree student at the Indian Institute of Technology Hyderabad, pursuing a B.Tech in Mechanical Engineering and an M.Tech in Aerospace Engineering with a Minor in Robotics.",
-    "My research concerns the modeling and control of complex dynamical systems — spanning fluid–structure interaction, aerial robotics and soft robotics. I develop variable-fidelity solvers, operator-learning surrogates, and optimization- and learning-based safe control methods, combining theory, numerical simulation and hardware-in-the-loop validation.",
+    "My primary research objectives are modeling ",
   ],
   links: [
     { label: "Email", url: "mailto:neerajbalachandar@gmail.com" },
