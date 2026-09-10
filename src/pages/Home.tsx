@@ -117,22 +117,11 @@ export default function Home() {
             </SubHead>
             <ul className="space-y-2">
               {posts
-                .filter((b) => b.category === "Course notes")
+                .filter((b) => b.category === "Blog")
+                .slice(0, 2)
                 .map((b) => (
                   <li key={b.slug} className="text-[1rem] leading-snug">
-                      <a
-                        href={`/blog`}
-                      onClick={(e) => {
-                        // if post has attachment url, open protected to attachment
-                        const att = b.attachments && b.attachments[0];
-                        if (att && /drive\.google\.com|https?:\/\//.test(att.url)) {
-                          openProtected(e, att.url, b.slug);
-                        }
-                      }}
-                      className="border-b border-rule pb-px transition-colors hover:border-accent hover:text-accent"
-                    >
-                      {b.title}
-                    </a>
+                    <A href={`/blog/${b.slug}`}>{b.title}</A>
                   </li>
                 ))}
             </ul>

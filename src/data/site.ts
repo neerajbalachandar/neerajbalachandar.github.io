@@ -34,6 +34,19 @@ export const profile = {
 
 export const courseNotesPassword = "changeme";
 
+export const courseNotesLinks = [
+  {
+    slug: "reinforcement-learning",
+    title: "Reinforcement Learning",
+    url: "https://drive.google.com/drive/folders/YOUR_REINFORCEMENT_LINK",
+  },
+  {
+    slug: "optimal-control",
+    title: "Optimal Control",
+    url: "https://drive.google.com/drive/folders/YOUR_OPTIMAL_CONTROL_LINK",
+  },
+];
+
 export const interests = [
   "Scientific Computing and AI4Science",
   "Fluid-Structure Interaction",

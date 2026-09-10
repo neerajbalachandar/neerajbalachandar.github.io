@@ -183,10 +183,10 @@ export const projects: Project[] = [
     summary:
       "Developed a multi-UAV exploration and rescue framework evaluated at the Swarm Rescue Challenge hosted by CIEDS – Ecole Polytechnique de Paris.",
     status: "past",
-    period: "Nov 2024 – Mar 2025",
+    period: "Nov 2024 - Mar 2025",
     advisors: [{ name: "Dr. David Filliat" }],
     themes: ["robotics", "control"],
-    cover: "/images/projects/swarm-rescue.png",
+    cover: "/images/projects/swarm.png",
     highlights: [
       "Developed a Python-based multi-UAV exploration and rescue framework for unknown environments under obstacle, communication, and resource constraints.",
       "Designed decentralized swarm navigation using Artificial Potential Fields for exploration and RRT for return-to-base transport, with nearby drones maintaining a coordinated polygon formation around a designated leader.",

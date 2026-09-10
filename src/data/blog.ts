@@ -7,7 +7,7 @@ export type Post = {
   slug: string;
   title: string;
   date: string;
-  category: "Research notes" | "Course notes" | "General";
+  category: "Course notes" | "Blog";
   summary: string;
   body: string[];
   attachments?: { label: string; url: string }[];
@@ -15,16 +15,13 @@ export type Post = {
 
 export const posts: Post[] = [
   {
-    slug: "course-notes",
-    title: "Course Notes (Template)",
-    date: "2025",
-    category: "Course notes",
-    summary: "Add important course notes and attach your PDF here.",
-    body: [
-      "Add important course notes and attach your PDF here.",
-      "Course-specific material now lives in the Courses section; use this page for cross-cutting notes that do not belong to a single course.",
-    ],
-    attachments: [{ label: "Notes (PDF)", url: "/uploads/notes/course-notes.pdf" }],
+    slug: "neural-operator-learning",
+    title: "Neural Operator Learning",
+    date: "2026-09-10",
+    category: "Blog",
+    summary: "Notes and resources about neural operator learning.",
+    body: [""],
+    attachments: [{ label: "Neural Operator Learning (MD)", url: "/uploads/Neural%20Operator%20Learning.md" }],
   },
 ];
 

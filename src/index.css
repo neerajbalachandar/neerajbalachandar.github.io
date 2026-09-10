@@ -49,3 +49,20 @@ body {
   background: #f3e4e4;
   color: #16181dc6;
 }
+
+/* --- Markdown / prose tweaks --- */
+.prose p {
+  margin-top: 0.85rem;
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+/* Ensure display math (KaTeX) has vertical rhythm */
+.katex-display {
+  margin: 1rem 0;
+}
+
+/* If using Tailwind's prose class, make sure children have spacing */
+.prose > * + * {
+  margin-top: 1rem;
+}

@@ -15,7 +15,8 @@ import {
   thesisPublications,
 } from "../data/publications";
 import { courses } from "../data/courses";
-import { news, posts } from "../data/blog";
+import { posts } from "../data/blog";
+import { courseNotesLinks } from "../data/site";
 import { courseNotesPassword } from "../data/site";
 import NotFound from "./NotFound";
 
@@ -198,47 +199,42 @@ export function BlogIndex() {
   return (
     <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader title="Blogs" meta="Small blogs and course notes." />
-      <ul className="mt-8 space-y-5">
+      {/* Course notes blocks */}
+      <SubHead>Course Notes</SubHead>
+      <div className="custom-blocks">
+        {courseNotesLinks.map((c) => (
+          <div
+            key={c.slug}
+            className="block-item"
+            onClick={(e) => openProtected(e, c.url)}
+            role="button"
+          >
+            <div className="text-[1.02rem] font-semibold">{c.title}</div>
+            <div className="mt-2">
+              <span className="block-tag tag-course">Course notes</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Blog blocks */}
+      <SubHead className="mt-8">Blogs</SubHead>
+      <div className="custom-blocks">
         {posts
-          .filter((b) => b.category === "Course notes")
+          .filter((b) => b.category === "Blog")
           .map((b) => {
-            const att = b.attachments && b.attachments[0];
-            const isExternal = att && /https?:\/\//.test(att.url);
             return (
-              <li key={b.slug}>
-                <h3 className="text-[1.03rem] leading-snug">
-                  {isExternal ? (
-                    <a
-                      href={att!.url}
-                      onClick={(e) => openProtected(e, att!.url)}
-                      className="border-b border-rule pb-px transition-colors hover:border-accent hover:text-accent"
-                    >
-                      {b.title}
-                    </a>
-                  ) : (
-                    <A href={`/blog/${b.slug}`}>{b.title}</A>
-                  )}
-                </h3>
-                <p className="mt-1 text-[0.95rem] text-muted">{b.summary}</p>
-                <p className="mt-1 font-sans text-[0.7rem] uppercase tracking-wide text-muted">
-                  {b.category} · {b.date}
-                </p>
-              </li>
+              <div key={b.slug} className="block-item">
+                <A href={`/blog/${b.slug}`}>
+                  <div className="text-[1.02rem] font-semibold">{b.title}</div>
+                  <div className="mt-2">
+                    <span className="block-tag tag-blog">Blog</span>
+                  </div>
+                </A>
+              </div>
             );
           })}
-      </ul>
-
-      <section className="mt-12">
-        <SubHead>Archive</SubHead>
-        <ul className="space-y-1 text-[1.02rem]">
-          {news.map((n) => (
-            <li key={n.slug}>
-              <A href={`/news/${n.slug}`}>{n.title}</A>
-              <span className="ml-2 font-sans text-xs text-muted">{n.date}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
+      </div>
     </main>
   );
 }

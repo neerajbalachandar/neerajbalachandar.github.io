@@ -4,6 +4,23 @@ import { getCourse } from "../data/courses";
 import { getNews, getPost } from "../data/blog";
 import { getProject } from "../data/projects";
 import NotFound from "./NotFound";
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
+import { Link as RouterLink } from "../lib/router";
+
+function slugify(title: string) {
+  return encodeURIComponent(
+    title
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+  );
+}
 
 export function PublicationPage({ slug }: { slug: string }) {
   const p = getPublication(slug);
@@ -110,24 +127,63 @@ export function CoursePage({ slug }: { slug: string }) {
 export function PostPage({ slug }: { slug: string }) {
   const p = getPost(slug);
   if (!p) return <NotFound what="post" />;
+  const [md, setMd] = useState<string | null>(null);
+
+  useEffect(() => {
+    const att = p.attachments && p.attachments[0];
+    if (att && /\.md$/i.test(att.url)) {
+      fetch(att.url)
+        .then((r) => r.text())
+        .then((t) => {
+          // convert wiki-style [[Title]] to internal markdown links pointing to hash routes
+          const converted = t.replace(/\[\[([^\]]+)\]\]/g, (_m, title) => {
+            const slug = slugify(title);
+            return `[${title}](#/blog/${slug})`;
+          });
+          setMd(converted);
+        })
+        .catch(() => setMd(null));
+    }
+  }, [p]);
   return (
     <main className="mx-auto max-w-6xl px-6 pb-24">
       <PageHeader eyebrow={p.category} title={p.title} meta={p.date} backTo="/" backLabel="Home" />
       <section className="mt-8">
-        <Prose paragraphs={p.body} />
+        {md ? (
+          <div className="prose max-w-none">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm, remarkMath]}
+              rehypePlugins={[rehypeKatex]}
+              components={{
+                a: ({ href, children, ...props }: any) => {
+                  if (!href) return <a {...props}>{children}</a>;
+                  // internal hash route links (#/blog/slug)
+                  if (href.startsWith("#/blog/")) {
+                    // convert to router `to` prop by stripping leading '#'
+                    const to = href.replace(/^#/, "");
+                    return (
+                      <RouterLink to={to} className="text-accent font-semibold underline">
+                        {children}
+                      </RouterLink>
+                    );
+                  }
+                  // external or other links
+                  return (
+                    <a href={href} {...props} target={/^https?:\/\//.test(href) ? "_blank" : undefined} rel="noreferrer" className="text-accent/90">
+                      {children}
+                    </a>
+                  );
+                },
+              }}
+            >
+              {md}
+            </ReactMarkdown>
+          </div>
+        ) : (
+          <Prose paragraphs={p.body} />
+        )}
       </section>
-      {p.attachments && p.attachments.length > 0 && (
-        <section className="mt-8">
-          <SubHead>Attachments</SubHead>
-          <ul className="space-y-1 text-[1.02rem]">
-            {p.attachments.map((a) => (
-              <li key={a.url}>
-                <A href={a.url}>{a.label}</A>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      {/* Attachments removed per request */}
     </main>
   );
 }
