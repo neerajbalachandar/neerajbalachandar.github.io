@@ -179,33 +179,32 @@ The objective of invoking this supremum is to establish reliability. In scientif
 ### Formalizing Domain Discretization
 
 **Discrete Refinement & Discretization**  
-A sequence of nested sets \(D_1 \subset D_2 \subset \dots \subset D\) such that for any \(\epsilon > 0\), there exists an \(L\) where  
-\[
+A sequence of nested sets $D_1 \subset D_2 \subset \dots \subset D$ such that for any $\epsilon > 0$, there exists an $L$ where  
+$$
 D \subseteq \bigcup_{x \in D_L} \{y : \|y - x\|_2 < \epsilon\}.
-\]  
-Any member \(D_L\) is called a discretization of \(D\).
+$$  
+Any member $D_L$ is called a discretization of $D$.
 
 **Discretized Uniform Risk**  
-The quantity \(R_{\mathcal{K}}\) measures the **worst-case error** between the true continuous operator and its discrete approximation, evaluated over a compact set of input functions \(\mathcal{K} \subset \mathcal{A}\). Formally,  
-\[
+The quantity $R_{\mathcal{K}}$ measures the **worst-case error** between the true continuous operator and its discrete approximation, evaluated over a compact set of input functions $\mathcal{K} \subset \mathcal{A}$. Formally,  
+$$
 R_{\mathcal{K}}(\mathcal{G}, \hat{\mathcal{G}}, D_L) = \sup_{a \in \mathcal{K}} \|\hat{\mathcal{G}}(D_L, a|_{D_L}) - \mathcal{G}(a)\|_{\mathcal{U}},
-\]  
+$$  
 where:  
-- \(\mathcal{G}: \mathcal{A} \to \mathcal{U}\) is the true continuous operator.  
-- \(\hat{\mathcal{G}}: \mathbb{R}^{Ld} \times \mathbb{R}^{Lm} \to \mathcal{U}\) is the discrete approximation map. It takes the discretized input (point-wise evaluations on \(D_L\)) and outputs a continuous function in \(\mathcal{U}\).  
-- \(a|_{D_L}\) denotes the point-wise evaluations of the input function \(a\) at the \(L\) points of \(D_L\).  
-- The supremum is taken over all functions \(a\) in the compact set \(\mathcal{K}\), ensuring a uniform guarantee across that entire class of inputs.  
+- $\mathcal{G}: \mathcal{A} \to \mathcal{U}$ is the true continuous operator.  
+- $\hat{\mathcal{G}}: \mathbb{R}^{Ld} \times \mathbb{R}^{Lm} \to \mathcal{U}$ is the discrete approximation map. It takes the discretized input (point-wise evaluations on $D_L$) and outputs a continuous function in $\mathcal{U}$.  
+- $a|_{D_L}$ denotes the point-wise evaluations of the input function $a$ at the $L$ points of $D_L$.  
+- The supremum is taken over all functions $a$ in the compact set $\mathcal{K}$, ensuring a uniform guarantee across that entire class of inputs.  
 
 **Discretization Invariance**  
-Given a finite-dimensional parameter space \(\Theta \subseteq \mathbb{R}^p\) and a parametric operator \(\mathcal{G}: \mathcal{A} \times \Theta \to \mathcal{U}\), the architecture is **discretization-invariant** if there exists a sequence of discrete maps  
-\[
+Given a finite-dimensional parameter space $\Theta \subseteq \mathbb{R}^p$ and a parametric operator $\mathcal{G}: \mathcal{A} \times \Theta \to \mathcal{U}$, the architecture is **discretization-invariant** if there exists a sequence of discrete maps  
+$$
 \hat{\mathcal{G}}_L : \mathbb{R}^{Ld} \times \mathbb{R}^{Lm} \times \Theta \to \mathcal{U}
-\]  
-such that for any fixed parameters \(\theta \in \Theta\) and any compact set \(\mathcal{K} \subset \mathcal{A}\),  
-\[
+$$  
+such that for any fixed parameters $\theta \in \Theta$ and any compact set $\mathcal{K} \subset \mathcal{A}$,  
+$$
 \lim_{L \to \infty} R_{\mathcal{K}}(\mathcal{G}(\cdot, \theta), \hat{\mathcal{G}}_L(\cdot, \cdot, \theta), D_L) = 0.
-\]  
-In other words, as the discretization is refined (\(L \to \infty\)), the discrete approximation converges uniformly to the true continuous operator over the compact set \(\mathcal{K}\).
-
+$$  
+In other words, as the discretization is refined ($L \to \infty$), the discrete approximation converges uniformly to the true continuous operator over the compact set $\mathcal{K}$.
 
 *Go to the [[Neural Operator Architecture]] blog next, to learn more about how they achieve this incredible speed-up and discretization invariance in practice.*
