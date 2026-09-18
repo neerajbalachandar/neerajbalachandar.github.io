@@ -8,7 +8,7 @@ export const profile = {
   affiliation: "Indian Institute of Technology Hyderabad",
   email: "neerajbalachandar@gmail.com",
   // Drop your own photo at public/images/portrait.jpg to replace this.
-  photo: "/images/me.jpg",
+  photo: "/images/me.jpeg",
   photoFallback:
     "https://neerajbalachandar.github.io/author/neeraj-balachandar/avatar_hu4047339585979398385.jpg",
   cv: "/uploads/resume.pdf",

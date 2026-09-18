@@ -53,12 +53,20 @@ export default function Home() {
     }
   };
 
+  // Optional small caption shown below the main text. Set to empty string to hide.
+  const videoCaption = "Distributed formation control on an Erdos-Renyi graph, G(20, 0.25)";
+
   return (
     <main className="mx-auto max-w-6xl px-6 pb-24">
-      {/* Header */}
+      {/* Header: photo at left, text center, looping video at right */}
       <section className="flex flex-col gap-6 py-12 sm:flex-row sm:items-start">
-        <Portrait src={profile.photo} fallback={profile.photoFallback} alt={profile.name} />
-        <div>
+        <Portrait
+          src={profile.photo}
+          fallback={profile.photoFallback}
+          alt={profile.name}
+          className="h-44 w-44 sm:h-56 sm:w-56 shrink-0 rounded-sm border border-rule object-cover"
+        />
+        <div className="min-w-0 flex-1">
           <h1 className="text-3xl leading-tight tracking-tight sm:text-4xl">{profile.name}</h1>
           <p className="mt-2 font-sans text-sm text-muted">
             {profile.role} · {profile.affiliation}
@@ -90,6 +98,20 @@ export default function Home() {
               <div className="text-sm">{education[0].area}</div>
             </div>
           )}
+        </div>
+
+        <div className="shrink-0">
+          <div className="h-44 w-44 sm:h-56 sm:w-56 overflow-hidden rounded-sm border border-rule bg-panel">
+            <video
+              src="/videos/neeraj_fixed.mp4"
+              muted
+              loop
+              autoPlay
+              playsInline
+              className="h-full w-full object-cover"
+            />
+          </div>
+          {videoCaption && <p className="mt-2 max-w-[11rem] text-[0.65rem] leading-relaxed text-muted">{videoCaption}</p>}
         </div>
       </section>
 

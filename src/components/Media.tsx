@@ -77,25 +77,26 @@ export function Portrait({
   src,
   fallback,
   alt,
+  className,
 }: {
   src: string;
   fallback: string;
   alt: string;
+  className?: string;
 }) {
   const [stage, setStage] = useState(0);
   const source = stage === 0 ? src : stage === 1 ? fallback : "";
+  const imgClass = className ?? "h-72 w-72 shrink-0 rounded-sm border border-rule object-cover";
   if (stage > 1)
     return (
-      <div className="flex h-72 w-72 items-center justify-center rounded-sm border border-rule bg-panel font-serif text-4xl text-muted">
-        NB
-      </div>
+      <div className={`${imgClass} flex items-center justify-center bg-panel font-serif text-4xl text-muted`}>NB</div>
     );
   return (
     <img
       src={source}
       alt={alt}
       onError={() => setStage((s) => s + 1)}
-      className="h-72 w-72 shrink-0 rounded-sm border border-rule object-cover"
+      className={imgClass}
     />
   );
 }

@@ -15,6 +15,7 @@ It has been proven (through the Universal Approximation Theorem for Operators) t
 Now, we will discuss the generalization of the problem, formulated for a general PDE and its corresponding function spaces. This requires a small background in functional analysis. 
 
 
+
 ### Notations Used
 
 - **$\mathbf{x} \in D \subset \mathbb{R}^d$**: A point in the spatial domain. Here, $D$ is an open, bounded set with dimension $d$ (eg: a 2D plate or a 3D volume).
@@ -27,6 +28,17 @@ Now, we will discuss the generalization of the problem, formulated for a general
 
 - **$\mathbf{u}(\mathbf{x}) \in \mathcal{U}$**: The solution function we wish to find (e.g., temperature, pressure, or displacement field).
 
+
+### Properties of Discretization Invariance
+
+**1. Input Query (Arbitrary Discretizations)**
+The model takes point-wise evaluations of a function $a$ at a set of $L$ points, $D_L = \{x_\ell\}_{\ell=1}^L \subset D$. The input is $a|_{D_L} \in \mathbb{R}^{Ld}$. The architecture does not depend on the grid size or topology and can be refined or coarsened without changing the parameters.
+
+**2. Output Sampling (Function Space)**
+The output is not a finite-dimensional vector. It is an element of the infinite-dimensional function space $\mathcal{U}$. This allows querying the solution $u(x)$ at any arbitrary point $x \in D$, regardless of where the input discretization points were located.
+
+**3. Convergence**
+As the input discretization is refined (i.e., $L \to \infty$), the discrete approximation converges uniformly to the true continuous operator. This allows the same architecture to transfer solutions across different grid geometries and resolutions with a single set of trained parameters $\theta$.
 
 
 ### Why $L_a$ is defined in the weak form and maps to $\mathcal{U}^*$
@@ -164,5 +176,35 @@ proves that the architecture is a *universal approximator* for operators. It ens
 
 The objective of invoking this supremum is to establish reliability. In scientific computing and engineering, we often cannot rely on probabilistic guarantees alone. A model that performs excellently on average might still fail catastrophically on rare but physically critical inputs (eg: extreme material properties). The supremum guarantee tells us that the model works uniformly well across an entire class of continuous inputs, aligning with classical numerical analysis, where we traditionally bound the maximum error over all possible solutions (eg: the trapezoidal rule in numerical integration, or a priori error estimates in the finite element method).
 
+### Formalizing Domain Discretization
+
+**Discrete Refinement & Discretization**  
+A sequence of nested sets $D_1 \subset D_2 \subset \dots \subset D$ such that for any $\epsilon > 0$, there exists an $L$ where  
+$$
+D \subseteq \bigcup_{x \in D_L} \{y : \|y - x\|_2 < \epsilon\}.
+$$  
+Any member $D_L$ is called a discretization of $D$.
+
+**Discretized Uniform Risk**  
+The quantity $R_{\mathcal{K}}$ measures the **worst-case error** between the true continuous operator and its discrete approximation, evaluated over a compact set of input functions $\mathcal{K} \subset \mathcal{A}$. Formally,  
+$$
+R_{\mathcal{K}}(\mathcal{G}, \hat{\mathcal{G}}, D_L) = \sup_{a \in \mathcal{K}} \|\hat{\mathcal{G}}(D_L, a|_{D_L}) - \mathcal{G}(a)\|_{\mathcal{U}},
+$$  
+where:  
+- $\mathcal{G}: \mathcal{A} \to \mathcal{U}$ is the true continuous operator.  
+- $\hat{\mathcal{G}}: \mathbb{R}^{Ld} \times \mathbb{R}^{Lm} \to \mathcal{U}$ is the discrete approximation map. It takes the discretized input (point-wise evaluations on $D_L$) and outputs a continuous function in $\mathcal{U}$.  
+- $a|_{D_L}$ denotes the point-wise evaluations of the input function $a$ at the $L$ points of $D_L$.  
+- The supremum is taken over all functions $a$ in the compact set $\mathcal{K}$, ensuring a uniform guarantee across that entire class of inputs.  
+
+**Discretization Invariance**  
+Given a finite-dimensional parameter space $\Theta \subseteq \mathbb{R}^p$ and a parametric operator $\mathcal{G}: \mathcal{A} \times \Theta \to \mathcal{U}$, the architecture is **discretization-invariant** if there exists a sequence of discrete maps  
+$$
+\hat{\mathcal{G}}_L : \mathbb{R}^{Ld} \times \mathbb{R}^{Lm} \times \Theta \to \mathcal{U}
+$$  
+such that for any fixed parameters $\theta \in \Theta$ and any compact set $\mathcal{K} \subset \mathcal{A}$,  
+$$
+\lim_{L \to \infty} R_{\mathcal{K}}(\mathcal{G}(\cdot, \theta), \hat{\mathcal{G}}_L(\cdot, \cdot, \theta), D_L) = 0.
+$$  
+In other words, as the discretization is refined ($L \to \infty$), the discrete approximation converges uniformly to the true continuous operator over the compact set $\mathcal{K}$.
 
 *Go to the [[Neural Operator Architecture]] blog next, to learn more about how they achieve this incredible speed-up and discretization invariance in practice.*
