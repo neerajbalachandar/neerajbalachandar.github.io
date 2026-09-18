@@ -13,12 +13,12 @@ export function Section({
   action?: ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-24 border-t border-rule py-10">
-      <div className="mb-6 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+    <section id={id} className="scroll-mt-24 border-t border-rule py-7">
+      <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
         <h2 className="font-sans text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-accent">
           {title}
         </h2>
-        {action ? <div className="font-sans text-xs text-muted">{action}</div> : null}
+        {action ? <div className="font-sans text-sm text-muted">{action}</div> : null}
       </div>
       {children}
     </section>
@@ -27,7 +27,7 @@ export function Section({
 
 export function SubHead({ children }: { children: ReactNode }) {
   return (
-    <h3 className="mb-3 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-muted">
+    <h3 className="mb-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-muted">
       {children}
     </h3>
   );
@@ -94,7 +94,7 @@ export function PageHeader({
   backLabel?: string;
 }) {
   return (
-    <header className="border-b border-rule pb-6 pt-10">
+    <header className="border-b border-rule pb-5 pt-8">
       <Link
         to={backTo}
         className="font-sans text-xs text-muted transition-colors hover:text-accent"
@@ -102,7 +102,7 @@ export function PageHeader({
         ← {backLabel}
       </Link>
       {eyebrow ? (
-        <p className="mt-4 font-sans text-[0.7rem] uppercase tracking-[0.18em] text-accent">
+        <p className="mt-3 font-sans text-[0.7rem] uppercase tracking-[0.18em] text-accent">
           {eyebrow}
         </p>
       ) : null}
@@ -114,7 +114,7 @@ export function PageHeader({
 
 export function Prose({ paragraphs }: { paragraphs: string[] }) {
   return (
-    <div className="space-y-3 text-[1.05rem] leading-relaxed">
+    <div className="space-y-2 text-[1.05rem] leading-relaxed">
       {paragraphs.map((p, i) => (
         <p key={i}>{p}</p>
       ))}

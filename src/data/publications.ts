@@ -30,7 +30,7 @@ export const publications: Publication[] = [
     type: "Journal",
     abstract:
       "Replace with the final abstract. Presents a geometry-informed, multi-task neural operator that learns coupled vortex-particle evolution and Eulerian velocity-field reconstruction in a shared Fourier latent space, exploiting shared Poisson PDE dynamics.",
-    github: "https://github.com/neerajbalachandar",
+    github: "https://github.com/neerajbalachandar/DD-MT-GI-NeuralOperator-for-Lagrangian-Flows",
     project: "dd-mt-gino",
   },
   {
@@ -44,7 +44,7 @@ export const publications: Publication[] = [
     type: "Journal",
     abstract:
       "Replace with the final abstract. Introduces VarFlExI, a variable-fidelity partitioned solver coupling a meshless reformulated vortex particle method with finite elements across non-conforming interfaces using the Common Refinement Method and RBF interpolation.",
-    github: "https://github.com/neerajbalachandar",
+    github: "https://github.com/neerajbalachandar/VarFlExI-solver",
     project: "varflexi",
   },
   {
@@ -57,7 +57,7 @@ export const publications: Publication[] = [
     type: "Journal",
     abstract:
       "Replace with the final abstract. Presents modeling and control of aerial robots from constrained dynamics, recovering the net wrench from generalized-coordinate measurements and learning free-flight dynamics from constrained experimental data.",
-    github: "https://github.com/neerajbalachandar",
+    github: "https://github.com/YashwanthProfile/LearntoFly_RL_sim",
     project: "learn-to-fly",
   },
 
@@ -65,6 +65,7 @@ export const publications: Publication[] = [
   {
     slug: "docking-aim",
     authors: "Neeraj Balachandar, Shriram Hari, Vishnu R. Unni",
+    doi: "https://ieeexplore.ieee.org/abstract/document/11658034",
     title: "Nonlinear Model Predictive Control via Sequential Convex Programming for Drone-to-Drone Docking",
     venue:
       "Presented at the IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM 2026), July 10, 2026, Genova, Italy (In-Person Contributed Paper Session)",
@@ -72,7 +73,7 @@ export const publications: Publication[] = [
     type: "Conference",
     abstract:
       "Replace with the final abstract. A receding-horizon NMPC framework for drone-to-drone docking solved through Sequential Convex Programming, validated in high-fidelity MuJoCo simulation.",
-    github: "https://github.com/neerajbalachandar",
+    github: "https://github.com/neerajbalachandar/NMPC-SCP-Drone-to-Drone-Docking",
     project: "nmpc-scp-docking",
   },
   {
@@ -90,6 +91,7 @@ export const publications: Publication[] = [
   },
   {
     slug: "flapping-actuator",
+    doi: "https://arc.aiaa.org/doi/abs/10.2514/6.2025-1461",
     authors:
       "Neeraj Balachandar, Yashwanth M., Akash M., Mahathi Kesavan, Vishnu R. Unni",
     title: "Actuator System for Directional Manoeuvre of a Flapping Wing Aerial Vehicle",

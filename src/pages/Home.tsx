@@ -325,8 +325,7 @@ export default function Home() {
       {/* Contact */}
       <Section id="contact" title="Contact">
         <p className="text-[1.05rem] leading-relaxed">
-          I am happy to discuss research collaborations and doctoral opportunities. The most
-          reliable way to reach me is by email at{" "}
+          I am always open to discussing scientific inquiries. You can reach me at{" "}
           <A href={`mailto:${profile.email}`}>{profile.email}</A>.
         </p>
         <p className="mt-2 text-[1rem] text-muted">{profile.address}</p>

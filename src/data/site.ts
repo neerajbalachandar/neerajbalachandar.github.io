@@ -13,10 +13,9 @@ export const profile = {
     "https://neerajbalachandar.github.io/author/neeraj-balachandar/avatar_hu4047339585979398385.jpg",
   cv: "/uploads/resume.pdf",
   address:
-    "Indian Institute of Technology Hyderabad, Kandi, Sangareddy 502284, Telangana, India.",
+    "Indian Institute of Technology Hyderabad, Sangareddy 502284, Telangana, India.",
   bio: [
-    "I am a Dual Degree student at the Indian Institute of Technology Hyderabad, pursuing a B.Tech in Mechanical Engineering and an M.Tech in Aerospace Engineering with a Minor in Robotics.",
-    "My primary research objectives are the modeling and control of complex dynamical systems, like fluid-structure interaction, soft and aerial robotics.",
+    "I am currently working with Dr. Vishnu R. Unni in the Dynamics and Control (DysCo) Lab at IITH. My research focuses on modeling and control of complex physical systems, primarily through reduced-order, data-driven representations that are computationally efficient for closed-loop control."
   ],
   links: [
     { label: "Email", url: "mailto:neerajbalachandar@gmail.com" },
@@ -48,10 +47,9 @@ export const courseNotesLinks = [
 ];
 
 export const interests = [
-  "Scientific Computing and AI4Science",
-  "Fluid-Structure Interaction",
-  "Optimal Control and Robotics",
-  "Complex Systems and Nonlinear Dynamics",
+  "Scientific Computing, AI4Science",
+  "Optimal Control, Robotics",
+  "Complex Systems, Nonlinear Dynamics",
 ];
 
 export const education = [
