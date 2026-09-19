@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <main className="mx-auto max-w-6xl px-6 pb-24">
       {/* Header: photo at left, text center, looping video at right */}
-      <section className="flex flex-col gap-6 py-12 sm:flex-row sm:items-start">
+      <section className="flex flex-col gap-6 pt-10 pb-8 sm:flex-row sm:items-start">
         <Portrait
           src={profile.photo}
           fallback={profile.photoFallback}
@@ -122,7 +122,7 @@ export default function Home() {
             <p key={i}>{p}</p>
           ))}
         </div>
-        <div className="mt-8 grid gap-8 lg:grid-cols-2">
+        <div className="mt-6 grid gap-8 lg:grid-cols-2">
           <div>
             <SubHead>Research Interests</SubHead>
             <ul className="space-y-1 text-[1rem]">
@@ -157,6 +157,7 @@ export default function Home() {
       <Section
         id="publications"
         title="Recent Publications"
+        titleHref="/publications"
         action={
           <Link to="/publications" className="hover:text-accent">
             All publications →
@@ -204,6 +205,7 @@ export default function Home() {
       <Section
         id="research"
         title="Research Projects"
+        titleHref="/projects"
         action={
           <Link to="/projects" className="hover:text-accent">
             All projects →

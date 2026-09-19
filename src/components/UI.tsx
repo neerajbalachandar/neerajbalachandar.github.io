@@ -6,17 +6,25 @@ export function Section({
   title,
   children,
   action,
+  titleHref,
 }: {
   id: string;
   title: ReactNode;
   children: ReactNode;
   action?: ReactNode;
+  titleHref?: string;
 }) {
   return (
-    <section id={id} className="scroll-mt-24 border-t border-rule py-7">
+    <section id={id} className="scroll-mt-24 border-t border-rule py-6">
       <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
         <h2 className="font-sans text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-accent">
-          {title}
+          {titleHref ? (
+            <Link to={titleHref} className="hover:opacity-70 transition-opacity">
+              {title}
+            </Link>
+          ) : (
+            title
+          )}
         </h2>
         {action ? <div className="font-sans text-sm text-muted">{action}</div> : null}
       </div>
